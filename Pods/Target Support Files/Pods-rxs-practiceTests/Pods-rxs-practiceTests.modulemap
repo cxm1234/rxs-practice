@@ -1,0 +1,6 @@
+framework module Pods_rxs_practiceTests {
+  umbrella header "Pods-rxs-practiceTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
