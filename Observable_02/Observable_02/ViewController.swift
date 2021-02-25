@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        test2()
+        test8()
     }
 }
 
@@ -37,11 +37,76 @@ extension ViewController {
         let one = 1
         let two = 2
         let three = 3
-        
         let observable = Observable.of(one, two, three)
         _ = observable.subscribe { (event) in
             print(event)
         }
     }
+    
+    private func test3() {
+        let one = 1
+        let two = 2
+        let three = 3
+        let observable = Observable.of(one, two, three)
+        _ = observable.subscribe({ (event) in
+            if let element = event.element {
+                print(element)
+            }
+        })
+    }
+    
+    private func test4() {
+        print("start for test4")
+        let one = 1
+        let two = 2
+        let three = 3
+        let observable = Observable.of(one, two, three)
+        _ = observable.subscribe(onNext: { (element) in
+            print(element)
+        })
+    }
+    
+    private func test5() {
+        let observable = Observable<Void>.empty()
+        _ = observable.subscribe (
+            onNext: { (element) in
+                print(element)
+            },
+            onCompleted: {
+                print("Completed")
+            }
+        )
+    }
+    
+    private func test6() {
+        let observable = Observable<Int>.range(start: 1, count: 10)
+        _ = observable.subscribe(onNext: { i in
+            let n = Double(i)
+            let fibonacci = Int(
+                ((pow(1.61803, n) - pow(0.61803, n)) /
+                 2.23606).rounded()
+            )
+            print(fibonacci)
+        })
+    }
+    
+    private func test7() {
+        let observable = Observable.of("A", "B", "C")
+        let subscription = observable.subscribe { (event) in
+            print(event)
+        }
+        print(type(of: subscription))
+        subscription.dispose()
+    }
+    
+    private func test8() {
+        let disposeBag = DisposeBag()
+        Observable.of("A", "B", "C")
+            .subscribe {
+                print($0)
+            }
+            .disposed(by: disposeBag)
+    }
+    
 }
 
