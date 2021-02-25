@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        test8()
+        test9()
     }
 }
 
@@ -106,6 +106,28 @@ extension ViewController {
                 print($0)
             }
             .disposed(by: disposeBag)
+    }
+    
+    private func test9() {
+        
+        let disposaBag = DisposeBag()
+        
+        _ = Observable<String>.create { (observer) -> Disposable in
+            observer.onNext("1")
+            observer.onCompleted()
+            observer.onNext("?")
+            return Disposables.create()
+        }.subscribe(onNext: {
+            print($0)
+        }, onError: {
+            print($0)
+        }, onCompleted: {
+            print("Completed")
+        }, onDisposed: {
+            print("Disposed")
+        })
+        .disposed(by: disposaBag)
+        
     }
     
 }
