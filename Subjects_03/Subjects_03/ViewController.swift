@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 enum MyError: Error {
     case anError
@@ -24,7 +25,7 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        test2()
+        test5()
     }
 
 }
@@ -89,6 +90,81 @@ extension ViewController {
                 print(label: "2)", event: $0)
             }
             .disposed(by: disposeBag)
+    }
+    
+    private func test3() {
+        let subject = ReplaySubject<String>.create(bufferSize: 2)
+        let disposeBag = DisposeBag()
+        
+        subject.onNext("1")
+        subject.onNext("2")
+        subject.onNext("3")
+        
+        subject
+            .subscribe {
+                print(label: "1)", event: $0)
+            }
+            .disposed(by: disposeBag)
+        
+        subject
+            .subscribe {
+                print(label: "2)", event: $0)
+            }
+            .disposed(by: disposeBag)
+        
+        subject.onNext("4")
+        
+        subject.onError(MyError.anError)
+        
+        subject.dispose()
+        
+        subject
+            .subscribe {
+                print(label: "3)", event: $0)
+            }
+            .disposed(by: disposeBag)
+        
+    }
+    
+    private func test4() {
+        let relay = PublishRelay<String>()
+        let disposeBag = DisposeBag()
+        
+        relay.accept("Knock knock, anyone home?")
+        
+        relay
+            .subscribe(onNext: {
+                print($0)
+            })
+            .disposed(by: disposeBag)
+        
+        relay.accept("1")
+        
+    }
+    
+    private func test5() {
+        let relay = BehaviorRelay(value: "Initial value")
+        let disposedBag = DisposeBag()
+        
+        relay.accept("New initial value")
+        
+        relay
+            .subscribe {
+                print(label: "1)", event: $0)
+            }
+            .disposed(by: disposedBag)
+        
+        relay.accept("1")
+        
+        relay
+            .subscribe {
+                print(label: "2)", event: $0)
+            }
+            .disposed(by: disposedBag)
+        
+        relay.accept("2")
+        
+        print(relay.value)
     }
 }
 
