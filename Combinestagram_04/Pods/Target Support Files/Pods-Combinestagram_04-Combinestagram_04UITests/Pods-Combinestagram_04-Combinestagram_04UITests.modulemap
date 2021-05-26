@@ -1,0 +1,6 @@
+framework module Pods_Combinestagram_04_Combinestagram_04UITests {
+  umbrella header "Pods-Combinestagram_04-Combinestagram_04UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
