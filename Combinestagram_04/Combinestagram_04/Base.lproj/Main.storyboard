@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-1826" y="-20"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Combinestagram-->
         <scene sceneID="nyO-jU-SaQ">
             <objects>
-                <viewController id="wbO-Jh-r9T" customClass="MainViewController" customModule="Combinestagram_04" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="wbO-Jh-r9T" customClass="MainViewController" customModule="Combinestagram_04" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Mg-ra-c4i"/>
                         <viewControllerLayoutGuide type="bottom" id="apt-nL-R2u"/>
@@ -42,6 +42,15 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="22x-l0-Cs8"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6d-og-ZSf">
                                 <rect key="frame" x="63.5" y="632" width="80" height="80"/>
@@ -52,6 +61,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="actionClear:" destination="wbO-Jh-r9T" eventType="touchUpInside" id="E9e-R4-FGA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZR-7f-whg">
                                 <rect key="frame" x="270.5" y="632" width="80" height="80"/>
@@ -61,6 +73,9 @@
                                     <constraint firstAttribute="width" secondItem="5ZR-7f-whg" secondAttribute="height" multiplier="1:1" id="kRo-aC-OnO"/>
                                 </constraints>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="actionSave:" destination="wbO-Jh-r9T" eventType="touchUpInside" id="E4S-ZW-E1x"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -74,7 +89,19 @@
                             <constraint firstItem="Tl8-6k-Y6n" firstAttribute="centerY" secondItem="y7o-c1-OQa" secondAttribute="centerY" multiplier="0.75" id="urZ-Ze-fzs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hql-GN-mbZ"/>
+                    <navigationItem key="navigationItem" title="Combinestagram" id="hql-GN-mbZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YW4-kZ-oXZ">
+                            <connections>
+                                <action selector="actionAdd:" destination="wbO-Jh-r9T" id="tth-NK-FGB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonClear" destination="m6d-og-ZSf" id="v4G-D0-Xlx"/>
+                        <outlet property="buttonSave" destination="5ZR-7f-whg" id="FYK-It-9pV"/>
+                        <outlet property="imagePreview" destination="Tl8-6k-Y6n" id="mea-F3-AFN"/>
+                        <outlet property="itemAdd" destination="YW4-kZ-oXZ" id="qLC-zT-x22"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S29-rv-jhE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,11 +119,11 @@
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="8" minY="16" maxX="8" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="iLd-mR-5yz">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="iLd-mR-5yz" customClass="PhotoCell" customModule="Combinestagram_04" customModuleProvider="target">
+                                <rect key="frame" x="8" y="16" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6Up-16-jDG">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -113,6 +140,9 @@
                                         <constraint firstItem="PA8-zf-maY" firstAttribute="leading" secondItem="6Up-16-jDG" secondAttribute="leading" id="ySh-dY-gj3"/>
                                     </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView" destination="PA8-zf-maY" id="QTS-DW-ecm"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
