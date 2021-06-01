@@ -15,7 +15,7 @@ extension Array where Element == UIImage {
         let tileSize = CGSize(width: round(size.width / CGFloat(columns)), height: round(size.height / CGFloat(rows)))
         
         UIGraphicsBeginImageContextWithOptions(size, true, 0)
-        
+        UIColor.white.setFill()
         UIRectFill(CGRect(origin: .zero, size: size))
         
         for (index, image) in self.enumerated() {
@@ -37,7 +37,7 @@ extension UIImage {
         let width = size.width * ratio
         let height = size.height * ratio
         
-        let scaledRect = CGRect(x: (newSize.width - width) / 2.0, y: (newSize.height - size.height) / 2.0, width: width, height: height)
+        let scaledRect = CGRect(x: (newSize.width - width) / 2.0, y: (newSize.height - height) / 2.0, width: width, height: height)
         
         UIGraphicsBeginImageContextWithOptions(scaledRect.size, false, 0.0)
         defer { UIGraphicsEndImageContext() }

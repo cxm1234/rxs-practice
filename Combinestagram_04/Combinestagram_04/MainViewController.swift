@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import RxSwift
+import RxRelay
 
 class MainViewController: UIViewController {
+    
+    private let bag = DisposeBag()
+    private let images = BehaviorRelay<[UIImage]>(value: [])
 
     @IBOutlet weak var imagePreview: UIImageView!
     @IBOutlet weak var buttonClear: UIButton!
@@ -16,15 +21,25 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        images
+            .subscribe(onNext: { [weak imagePreview] photos in
+                guard let preview = imagePreview else { return }
+                preview.image = photos.collage(size: preview.frame.size)
+            })
+            .disposed(by: bag)
+
     }
     
     @IBAction func actionClear(_ sender: Any) {
+        images.accept([])
     }
     
     @IBAction func actionSave(_ sender: Any) {
     }
-    
+     
     @IBAction func actionAdd(_ sender: Any) {
+        let newImages = images.value + [UIImage(named: "IMG_1907.jpg")!]
+        images.accept(newImages)
     }
     
     func showMessage(_ title: String, description: String? = nil) {
