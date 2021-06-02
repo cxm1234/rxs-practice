@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
     private func updateUI(photos: [UIImage]) {
         buttonSave.isEnabled = photos.count > 0 && photos.count % 2 == 0
         buttonClear.isEnabled = photos.count > 0
-        itemAdd.isEnabled = photos.count < 0
+        itemAdd.isEnabled = photos.count < 6
         title = photos.count > 0 ? "\(photos.count) photos" : "Collageit"
     }
     
@@ -51,8 +51,10 @@ class MainViewController: UIViewController {
     }
      
     @IBAction func actionAdd(_ sender: Any) {
-        let newImages = images.value + [UIImage(named: "IMG_1907.jpg")!]
-        images.accept(newImages)
+        
+        let photosViewController = storyboard!.instantiateViewController(identifier: "PhotosViewController") as! PhotosViewController
+        
+        navigationController!.pushViewController(photosViewController, animated: true)
     }
     
     func showMessage(_ title: String, description: String? = nil) {
