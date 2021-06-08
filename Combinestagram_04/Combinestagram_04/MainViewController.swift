@@ -43,17 +43,37 @@ class MainViewController: UIViewController {
         title = photos.count > 0 ? "\(photos.count) photos" : "Collageit"
     }
     
-    @IBAction func actionClear(_ sender: Any) {
+    @IBAction func actionClear() {
         images.accept([])
     }
     
     @IBAction func actionSave(_ sender: Any) {
+        guard let image = imagePreview.image else { return }
+        
+        PhotoWriter.save(image)
+            .subscribe { [weak self] id in
+                _ = self?.alert(title: "Saved with id: \(id)", text: nil)
+                self?.actionClear()
+            } onError: { [weak self] error in
+                self?.showMessage("Error", description: error.localizedDescription)
+            }.disposed(by: bag)
+
     }
      
     @IBAction func actionAdd(_ sender: Any) {
         
         let photosViewController = storyboard!.instantiateViewController(identifier: "PhotosViewController") as! PhotosViewController
-        
+        photosViewController.selectedPhotos
+            .subscribe(
+                onNext: { [weak self] newImage in
+                    guard let images = self?.images else { return }
+                    images.accept(images.value + [newImage] )
+                }, onDisposed: {
+                    print("Completed photo selection")
+                }
+            )
+            .disposed(by: bag)
+
         navigationController!.pushViewController(photosViewController, animated: true)
     }
     

@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		17F7FED6B970FF82132B9A34 /* Pods_Combinestagram_04_Combinestagram_04UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37F55792B565648E2734DA7 /* Pods_Combinestagram_04_Combinestagram_04UITests.framework */; };
 		20958D6F36A94AF147C53322 /* Pods_Combinestagram_04.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA093ED55E9B6D067590A8CB /* Pods_Combinestagram_04.framework */; };
+		31DBB216266FBF2900591198 /* UIViewController+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBB215266FBF2900591198 /* UIViewController+rx.swift */; };
 		D04F1391265D3BD000773A57 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F1390265D3BD000773A57 /* MainViewController.swift */; };
 		D04F1393266125D700773A57 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F1392266125D700773A57 /* PhotosViewController.swift */; };
 		D04F1395266129D600773A57 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F1394266129D600773A57 /* PhotoCell.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		0CEFA43B2BDA4E919CAB8A5A /* Pods-Combinestagram_04.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram_04.release.xcconfig"; path = "Target Support Files/Pods-Combinestagram_04/Pods-Combinestagram_04.release.xcconfig"; sourceTree = "<group>"; };
+		31DBB215266FBF2900591198 /* UIViewController+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+rx.swift"; sourceTree = "<group>"; };
 		44C7CCDFE515C5896F330F4C /* Pods-Combinestagram_04Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram_04Tests.release.xcconfig"; path = "Target Support Files/Pods-Combinestagram_04Tests/Pods-Combinestagram_04Tests.release.xcconfig"; sourceTree = "<group>"; };
 		722E66688DB6862244992348 /* Pods-Combinestagram_04.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram_04.debug.xcconfig"; path = "Target Support Files/Pods-Combinestagram_04/Pods-Combinestagram_04.debug.xcconfig"; sourceTree = "<group>"; };
 		8A502F878A083E2AA298D7F6 /* Pods-Combinestagram_04-Combinestagram_04UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Combinestagram_04-Combinestagram_04UITests.release.xcconfig"; path = "Target Support Files/Pods-Combinestagram_04-Combinestagram_04UITests/Pods-Combinestagram_04-Combinestagram_04UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				D04F1390265D3BD000773A57 /* MainViewController.swift */,
 				D04F1392266125D700773A57 /* PhotosViewController.swift */,
 				D04F1394266129D600773A57 /* PhotoCell.swift */,
+				31DBB215266FBF2900591198 /* UIViewController+rx.swift */,
 			);
 			path = Combinestagram_04;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				D04F1395266129D600773A57 /* PhotoCell.swift in Sources */,
 				D04F1393266125D700773A57 /* PhotosViewController.swift in Sources */,
 				D0FCD1F72656DE0C00D52F0D /* AppDelegate.swift in Sources */,
+				31DBB216266FBF2900591198 /* UIViewController+rx.swift in Sources */,
 				D0FCD1F92656DE0C00D52F0D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

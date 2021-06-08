@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="-1097.6635514018692" y="-20.086393088552917"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Photos View Controller-->
         <scene sceneID="lNF-wH-abo">
             <objects>
-                <collectionViewController id="aia-06-fPo" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="PhotosViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aia-06-fPo" customClass="PhotosViewController" customModule="Combinestagram_04" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="E0E-sk-JTY">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
