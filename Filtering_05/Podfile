@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Filtering_05' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Filtering_05
+  pod 'RxSwift', '5.1.1'
+  pod 'RxRelay', '5.1.1'
+
+  target 'Filtering_05Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Filtering_05UITests' do
+    # Pods for testing
+  end
+
+end
