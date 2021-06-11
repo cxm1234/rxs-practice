@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        testFour()
+        testSix()
     }
 
 }
@@ -78,6 +78,41 @@ extension ViewController {
                 print($0)
             })
             .disposed(by: disposeBag)
+    }
+    
+    private func testFive() {
+        let disposeBag = DisposeBag()
+        
+        Observable.of(2, 2, 3, 4, 4)
+            .skipWhile {
+                $0.isMultiple(of: 2)
+            }
+            .subscribe(onNext:{
+                print($0)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func testSix() {
+        let disposeBag = DisposeBag()
+        
+        let subject = PublishSubject<String>()
+        let trigger = PublishSubject<String>()
+        
+        subject
+            .skipUntil(trigger)
+            .subscribe(onNext: {
+                print($0)
+            })
+            .disposed(by: disposeBag)
+        
+        subject.onNext("A")
+        subject.onNext("B")
+        
+        trigger.onNext("X")
+        
+        subject.onNext("C")
+        
     }
 }
 
