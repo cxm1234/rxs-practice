@@ -1,0 +1,6 @@
+framework module Pods_GitFeed_08_GitFeed_08UITests {
+  umbrella header "Pods-GitFeed_08-GitFeed_08UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
