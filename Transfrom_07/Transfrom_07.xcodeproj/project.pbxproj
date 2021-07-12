@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		254A73C2ED6B20CC421DA931 /* Pods_Transfrom_07_Transfrom_07UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F894874EB9F4CB954A46576D /* Pods_Transfrom_07_Transfrom_07UITests.framework */; };
+		312337DA269BEDA100330846 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312337D9269BEDA100330846 /* Student.swift */; };
 		32EA9B5E6EF35C4E4D11F635 /* Pods_Transfrom_07.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33584FB9DD7095BDE3E2907A /* Pods_Transfrom_07.framework */; };
 		65318C2F5D61BE8FAEB97576 /* Pods_Transfrom_07Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B350D09BCE5B4725BC0F2 /* Pods_Transfrom_07Tests.framework */; };
 		D0F15660269B3FAD00364E92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1565F269B3FAD00364E92 /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		06982053FD4FC3BBD7088A5A /* Pods-Transfrom_07-Transfrom_07UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transfrom_07-Transfrom_07UITests.release.xcconfig"; path = "Target Support Files/Pods-Transfrom_07-Transfrom_07UITests/Pods-Transfrom_07-Transfrom_07UITests.release.xcconfig"; sourceTree = "<group>"; };
+		312337D9269BEDA100330846 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		33584FB9DD7095BDE3E2907A /* Pods_Transfrom_07.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transfrom_07.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50ECB871EA680BF3ECE87FA8 /* Pods-Transfrom_07Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transfrom_07Tests.debug.xcconfig"; path = "Target Support Files/Pods-Transfrom_07Tests/Pods-Transfrom_07Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D44F51357FE63EE00EBE17C /* Pods-Transfrom_07.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transfrom_07.debug.xcconfig"; path = "Target Support Files/Pods-Transfrom_07/Pods-Transfrom_07.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,7 +113,6 @@
 				50ECB871EA680BF3ECE87FA8 /* Pods-Transfrom_07Tests.debug.xcconfig */,
 				EDB90B1D1F8C85595C944B2E /* Pods-Transfrom_07Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -147,6 +148,7 @@
 				D0F15668269B3FB100364E92 /* Assets.xcassets */,
 				D0F1566A269B3FB100364E92 /* LaunchScreen.storyboard */,
 				D0F1566D269B3FB100364E92 /* Info.plist */,
+				312337D9269BEDA100330846 /* Student.swift */,
 			);
 			path = Transfrom_07;
 			sourceTree = "<group>";
@@ -410,6 +412,7 @@
 				D0F15664269B3FAD00364E92 /* ViewController.swift in Sources */,
 				D0F15660269B3FAD00364E92 /* AppDelegate.swift in Sources */,
 				D0F15662269B3FAD00364E92 /* SceneDelegate.swift in Sources */,
+				312337DA269BEDA100330846 /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
