@@ -8,6 +8,7 @@ target 'GitFeed_08' do
   # Pods for GitFeed_08
   pod 'RxSwift', '5.1.1'
   pod 'RxRelay', '5.1.1'
+#  pod 'Kingfisher', '~> 5.0'
 
   target 'GitFeed_08Tests' do
     inherit! :search_paths
