@@ -6,84 +6,88 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import Kingfisher
 
 class ActivityController: UITableViewController {
-
+    private let repo = "ReactiveX/RxSwift"
+    
+    private let events = BehaviorRelay<[Event]>(value: [])
+    private let bag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        title = repo
+        
+        self.refreshControl = UIRefreshControl()
+        let refreshControl = self.refreshControl!
+        
+        refreshControl.backgroundColor = UIColor(white: 0.98, alpha: 1.0)
+        refreshControl.tintColor = UIColor.darkGray
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        
+        refresh()
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return events.value.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let event = events.value[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+        cell.textLabel?.text = event.actor.name
+        cell.detailTextLabel?.text = event.repo.name + ", " + event.action.replacingOccurrences(of: "Event", with: "").lowercased()
+        cell.imageView?.kf.setImage(with: event.actor.avatar, placeholder: UIImage(named: "blank-avatar"))
         return cell
     }
-    */
+    
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+}
+
+extension ActivityController {
+    @objc func refresh() {
+        DispatchQueue.global(qos: .default).async { [weak self] in
+            guard let self = self else { return }
+            
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func fetchEvents(repo: String) {
+        let response = Observable.from(optional: [repo])
+            .map({ urlString -> URL in
+                return URL(string: "https://api.github.com/repos/\(urlString)/events")!
+            })
+            .map { url -> URLRequest in
+                return URLRequest(url: url)
+            }
+            .flatMap { request -> Observable<(response: HTTPURLResponse, data: Data)> in
+                return URLSession.shared.rx.response(request: request)
+            }
+            .share(replay: 1)
+            .filter { response, _ in
+                return 200..<300 ~= response.statusCode
+            }
+            .compactMap { _, data -> [Event]? in
+                return try? JSONDecoder().decode([Event].self, from: data)
+            }
+            .subscribe(onNext: { [weak self] newEvents in
+                self?.processEvents(newEvents)
+            })
+            .disposed(by: bag)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    func processEvents(_ newEvents: [Event]) {
+        var updatedEvents = newEvents + events.value
+        if updatedEvents.count > 50 {
+            updatedEvents = [Event](updatedEvents.prefix(upTo: 50))
+        }
+        events.accept(updatedEvents)
+        tableView.reloadData()
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
