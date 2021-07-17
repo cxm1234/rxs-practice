@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Combining_09' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Combining_09
+  pod 'RxSwift', '5.1.1'
+
+  target 'Combining_09Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Combining_09UITests' do
+    # Pods for testing
+  end
+
+end
