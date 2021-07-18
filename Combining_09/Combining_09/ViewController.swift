@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        testFive()
+        testSix()
     }
     
 }
@@ -91,6 +91,51 @@ extension ViewController {
         
         left.onCompleted()
         right.onCompleted()
+    }
+    
+    private func testSix() {
+        let left = PublishSubject<String>()
+        let right = PublishSubject<String>()
+        
+        let observable = Observable.combineLatest(left, right) { lastLeft, lastRight in
+            "\(lastLeft) \(lastRight)"
+        }
+        
+        _ = observable.subscribe(onNext: { value in
+            print(value)
+        })
+        
+        print("> Sending a value to Left")
+        left.onNext("Hello,")
+        print("> Sending a value to Right")
+        right.onNext("world")
+        print("> Sending another value to Right")
+        right.onNext("RxSwift")
+        print("> Sending another value to Left")
+        left.onNext("Have a good day,")
+        
+        left.onCompleted()
+        right.onCompleted()
+        
+    }
+    
+    private func TestSeven() {
+        let choice: Observable<DateFormatter.Style> = Observable.of(.short, .long)
+        let dates = Observable.of(Date())
+        
+        let observable = Observable.combineLatest(choice, dates) { format, when -> String in
+            let formatter = DateFormatter()
+            formatter.dateStyle = format
+            return formatter.string(from: when)
+        }
+        
+        _ = observable.subscribe(onNext: { value in
+            print(value)
+        })
+    }
+    
+    private func TestEight() {
+        
     }
 }
 
