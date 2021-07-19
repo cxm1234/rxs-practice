@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        testSix()
+        TestEleven()
     }
     
 }
@@ -135,7 +135,52 @@ extension ViewController {
     }
     
     private func TestEight() {
+        enum Weather {
+            case cloudy
+            case sunny
+        }
         
+        let left: Observable<Weather> = Observable.of(.sunny, .cloudy, .cloudy, .sunny)
+        let right = Observable.of("Lisbon", "Copenhagen", "London", "Madrid", "Vienna")
+        let observable = Observable.zip(left, right) { weather, city in
+            return "It's \(weather) in \(city)"
+        }
+        _ = observable.subscribe(onNext: { value in
+            print(value)
+        })
+        
+    }
+    
+    private func TestTen() {
+        let button = PublishSubject<Void>()
+        let textField = PublishSubject<String>()
+        
+        let observable = button.withLatestFrom(textField)
+        _ = observable.subscribe(onNext: { value in
+            print(value)
+        })
+        
+        textField.onNext("Par")
+        textField.onNext("Pari")
+        textField.onNext("Paris")
+        button.onNext(())
+        button.onNext(())
+    }
+    
+    private func TestEleven() {
+        let button = PublishSubject<Void>()
+        let textField = PublishSubject<String>()
+        
+        let observable = textField.sample(button)
+        _ = observable.subscribe(onNext: { value in
+            print(value)
+        })
+        
+        textField.onNext("Par")
+        textField.onNext("Pari")
+        textField.onNext("Paris")
+        button.onNext(())
+        button.onNext(())
     }
 }
 
