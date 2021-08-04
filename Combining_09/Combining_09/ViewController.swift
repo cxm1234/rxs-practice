@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        TestEleven()
+        TestTwelve()
     }
     
 }
@@ -181,6 +181,50 @@ extension ViewController {
         textField.onNext("Paris")
         button.onNext(())
         button.onNext(())
+    }
+    
+    private func TestTwelve() {
+        let left = PublishSubject<String>()
+        let right = PublishSubject<String>()
+        
+        let observable = left.amb(right)
+        _ = observable.subscribe(onNext: { value in
+            print(value)
+        })
+        
+        left.onNext("Lisbon")
+        right.onNext("Copenhagen")
+        left.onNext("London")
+        left.onNext("Madrid")
+        right.onNext("Vienna")
+        
+        left.onCompleted()
+        right.onCompleted()
+    }
+    
+    private func testThirteen() {
+        let one = PublishSubject<String>()
+        let two = PublishSubject<String>()
+        let three = PublishSubject<String>()
+        
+        let source = PublishSubject<Observable<String>>()
+        
+        let observable = source.switchLatest()
+        let disposable = observable.subscribe(onNext: { value in
+            print(value)
+        })
+        
+        source.onNext(one)
+        one.onNext("Some text from sequence one")
+        two.onNext("Some text from sequence two")
+        
+        source.onNext(two)
+        two.onNext("More text from sequence two")
+        one.onNext("and also from sequence one")
+        
+        source.onNext(three)
+        two.onNext("Why don't you see me?")
+        
     }
 }
 
