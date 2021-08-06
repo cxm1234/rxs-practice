@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        TestTwelve()
+        testThirteen()
     }
     
 }
@@ -224,6 +224,13 @@ extension ViewController {
         
         source.onNext(three)
         two.onNext("Why don't you see me?")
+        one.onNext("I'm alone, help me")
+        three.onNext("Hey it's three. I win.")
+        
+        source.onNext(one)
+        one.onNext("Nope. It's me, one!")
+        
+        disposable.dispose()
         
     }
 }
