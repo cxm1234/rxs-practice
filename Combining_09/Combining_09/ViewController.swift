@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        testThirteen()
+        testFivteen()
     }
     
 }
@@ -233,5 +233,23 @@ extension ViewController {
         disposable.dispose()
         
     }
+    
+    private func testFourteen() {
+        let source = Observable.of(1, 3, 5, 7, 9)
+        let observable = source.reduce(0, accumulator: + )
+        _ = observable.subscribe(onNext: { value in
+            print(value)
+        })
+    }
+    
+    private func testFivteen() {
+        let source = Observable.of(1, 3, 5, 7, 9)
+        let observable = source.scan(0, accumulator: +)
+        _ = observable.subscribe(onNext: { value in
+            print(value)
+        })
+    }
+    
+    
 }
 
