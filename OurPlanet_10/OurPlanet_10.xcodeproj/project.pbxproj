@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1B0D476156BB2510991FEC18 /* Pods_OurPlanet_10.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827FE87F841F8B22D0D2AEF1 /* Pods_OurPlanet_10.framework */; };
+		D04211B426C42AA400DC7B5F /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04211B326C42AA400DC7B5F /* EventsViewController.swift */; };
+		D04211B626C432DB00DC7B5F /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04211B526C432DB00DC7B5F /* EventCell.swift */; };
 		D0C55A4626C17ADB00DA5F7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C55A4526C17ADB00DA5F7A /* AppDelegate.swift */; };
 		D0C55A4D26C17ADB00DA5F7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C55A4B26C17ADB00DA5F7A /* Main.storyboard */; };
 		D0C55A4F26C17ADD00DA5F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C55A4E26C17ADD00DA5F7A /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 		822B82AD19F5CEA3FDA0E095 /* Pods-OurPlanet_10Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurPlanet_10Tests.debug.xcconfig"; path = "Target Support Files/Pods-OurPlanet_10Tests/Pods-OurPlanet_10Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		827FE87F841F8B22D0D2AEF1 /* Pods_OurPlanet_10.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OurPlanet_10.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE76E78C9DEE22C229CD447 /* Pods-OurPlanet_10Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurPlanet_10Tests.release.xcconfig"; path = "Target Support Files/Pods-OurPlanet_10Tests/Pods-OurPlanet_10Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D04211B326C42AA400DC7B5F /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		D04211B526C432DB00DC7B5F /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		D0C55A4226C17ADB00DA5F7A /* OurPlanet_10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OurPlanet_10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C55A4526C17ADB00DA5F7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C55A4C26C17ADB00DA5F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,11 +95,13 @@
 			isa = PBXGroup;
 			children = (
 				D0C55A4526C17ADB00DA5F7A /* AppDelegate.swift */,
+				D0C55A7526C1835400DA5F7A /* CategoriesViewController.swift */,
+				D04211B326C42AA400DC7B5F /* EventsViewController.swift */,
+				D04211B526C432DB00DC7B5F /* EventCell.swift */,
 				D0C55A4B26C17ADB00DA5F7A /* Main.storyboard */,
 				D0C55A4E26C17ADD00DA5F7A /* Assets.xcassets */,
 				D0C55A5026C17ADD00DA5F7A /* LaunchScreen.storyboard */,
 				D0C55A5326C17ADD00DA5F7A /* Info.plist */,
-				D0C55A7526C1835400DA5F7A /* CategoriesViewController.swift */,
 			);
 			path = OurPlanet_10;
 			sourceTree = "<group>";
@@ -214,8 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04211B626C432DB00DC7B5F /* EventCell.swift in Sources */,
 				D0C55A7626C1835400DA5F7A /* CategoriesViewController.swift in Sources */,
 				D0C55A4626C17ADB00DA5F7A /* AppDelegate.swift in Sources */,
+				D04211B426C42AA400DC7B5F /* EventsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
