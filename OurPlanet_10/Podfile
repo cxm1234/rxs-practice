@@ -7,14 +7,6 @@ target 'OurPlanet_10' do
 
   # Pods for OurPlanet_10
   pod 'RxSwift', '5.1.1'
-
-  target 'OurPlanet_10Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'OurPlanet_10UITests' do
-    # Pods for testing
-  end
+  pod 'RxCocoa', '5.1.1'
 
 end

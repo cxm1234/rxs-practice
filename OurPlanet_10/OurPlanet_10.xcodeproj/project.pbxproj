@@ -11,6 +11,8 @@
 		D00EE94226CD3B700092E04E /* EOEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EE94126CD3B700092E04E /* EOEvent.swift */; };
 		D00EE94426CD44DB0092E04E /* EOLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EE94326CD44DB0092E04E /* EOLocation.swift */; };
 		D00EE94626CD4C050092E04E /* EOError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EE94526CD4C050092E04E /* EOError.swift */; };
+		D00EE94826CD5D960092E04E /* EONET.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EE94726CD5D960092E04E /* EONET.swift */; };
+		D03ECFA526CD870500FE3ABA /* EOEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03ECFA426CD870500FE3ABA /* EOEnvelope.swift */; };
 		D04211B426C42AA400DC7B5F /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04211B326C42AA400DC7B5F /* EventsViewController.swift */; };
 		D04211B626C432DB00DC7B5F /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04211B526C432DB00DC7B5F /* EventCell.swift */; };
 		D0C55A4626C17ADB00DA5F7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C55A4526C17ADB00DA5F7A /* AppDelegate.swift */; };
@@ -32,6 +34,8 @@
 		D00EE94126CD3B700092E04E /* EOEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOEvent.swift; sourceTree = "<group>"; };
 		D00EE94326CD44DB0092E04E /* EOLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOLocation.swift; sourceTree = "<group>"; };
 		D00EE94526CD4C050092E04E /* EOError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOError.swift; sourceTree = "<group>"; };
+		D00EE94726CD5D960092E04E /* EONET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EONET.swift; sourceTree = "<group>"; };
+		D03ECFA426CD870500FE3ABA /* EOEnvelope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOEnvelope.swift; sourceTree = "<group>"; };
 		D04211B326C42AA400DC7B5F /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		D04211B526C432DB00DC7B5F /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		D0C55A4226C17ADB00DA5F7A /* OurPlanet_10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OurPlanet_10.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +89,8 @@
 				D00EE94126CD3B700092E04E /* EOEvent.swift */,
 				D00EE94326CD44DB0092E04E /* EOLocation.swift */,
 				D00EE94526CD4C050092E04E /* EOError.swift */,
+				D00EE94726CD5D960092E04E /* EONET.swift */,
+				D03ECFA426CD870500FE3ABA /* EOEnvelope.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,9 +244,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D04211B626C432DB00DC7B5F /* EventCell.swift in Sources */,
+				D00EE94826CD5D960092E04E /* EONET.swift in Sources */,
 				D00EE94626CD4C050092E04E /* EOError.swift in Sources */,
 				D00EE94226CD3B700092E04E /* EOEvent.swift in Sources */,
 				D00EE94426CD44DB0092E04E /* EOLocation.swift in Sources */,
+				D03ECFA526CD870500FE3ABA /* EOEnvelope.swift in Sources */,
 				D0C55A7626C1835400DA5F7A /* CategoriesViewController.swift in Sources */,
 				D0C55A4626C17ADB00DA5F7A /* AppDelegate.swift in Sources */,
 				D04211B426C42AA400DC7B5F /* EventsViewController.swift in Sources */,
