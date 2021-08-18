@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B0D476156BB2510991FEC18 /* Pods_OurPlanet_10.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827FE87F841F8B22D0D2AEF1 /* Pods_OurPlanet_10.framework */; };
+		D00EE94226CD3B700092E04E /* EOEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00EE94126CD3B700092E04E /* EOEvent.swift */; };
 		D04211B426C42AA400DC7B5F /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04211B326C42AA400DC7B5F /* EventsViewController.swift */; };
 		D04211B626C432DB00DC7B5F /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04211B526C432DB00DC7B5F /* EventCell.swift */; };
 		D0C55A4626C17ADB00DA5F7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C55A4526C17ADB00DA5F7A /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 		822B82AD19F5CEA3FDA0E095 /* Pods-OurPlanet_10Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurPlanet_10Tests.debug.xcconfig"; path = "Target Support Files/Pods-OurPlanet_10Tests/Pods-OurPlanet_10Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		827FE87F841F8B22D0D2AEF1 /* Pods_OurPlanet_10.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OurPlanet_10.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE76E78C9DEE22C229CD447 /* Pods-OurPlanet_10Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OurPlanet_10Tests.release.xcconfig"; path = "Target Support Files/Pods-OurPlanet_10Tests/Pods-OurPlanet_10Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D00EE94126CD3B700092E04E /* EOEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOEvent.swift; sourceTree = "<group>"; };
 		D04211B326C42AA400DC7B5F /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		D04211B526C432DB00DC7B5F /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		D0C55A4226C17ADB00DA5F7A /* OurPlanet_10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OurPlanet_10.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D00EE94026CD3B4B0092E04E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D00EE94126CD3B700092E04E /* EOEvent.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D0C55A3926C17ADB00DA5F7A = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 		D0C55A4426C17ADB00DA5F7A /* OurPlanet_10 */ = {
 			isa = PBXGroup;
 			children = (
+				D00EE94026CD3B4B0092E04E /* Model */,
 				D0C55A4526C17ADB00DA5F7A /* AppDelegate.swift */,
 				D0C55A7526C1835400DA5F7A /* CategoriesViewController.swift */,
 				D04211B326C42AA400DC7B5F /* EventsViewController.swift */,
@@ -221,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D04211B626C432DB00DC7B5F /* EventCell.swift in Sources */,
+				D00EE94226CD3B700092E04E /* EOEvent.swift in Sources */,
 				D0C55A7626C1835400DA5F7A /* CategoriesViewController.swift in Sources */,
 				D0C55A4626C17ADB00DA5F7A /* AppDelegate.swift in Sources */,
 				D04211B426C42AA400DC7B5F /* EventsViewController.swift in Sources */,
