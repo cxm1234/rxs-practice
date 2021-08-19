@@ -23,6 +23,5 @@ class EventCell: UITableViewCell {
         } else {
             date.text = ""
         }
-        
     }
 }

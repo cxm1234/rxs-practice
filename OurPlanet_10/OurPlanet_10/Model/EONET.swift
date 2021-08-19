@@ -20,6 +20,16 @@ class EONET {
         decoder.dateDecodingStrategy = .iso8601
         return decoder
     }
+    
+    static func filteredEvents(events: [EOEvent], forCategory category: EOCategory) -> [EOEvent] {
+        return events.filter { event in
+            return event.categories.contains(where: { $0.id == category.id }) &&
+                !category.events.contains {
+                    $0.id == event.id
+                }
+        }
+        .sorted(by: EOEvent.compareDates)
+    }
 }
 
 
