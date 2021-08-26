@@ -83,7 +83,7 @@
         <!--Events View Controller-->
         <scene sceneID="d9z-rl-clS">
             <objects>
-                <viewController id="DCW-z9-JUs" customClass="EventsViewController" customModule="OurPlanet_10" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="events" id="DCW-z9-JUs" customClass="EventsViewController" customModule="OurPlanet_10" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oL0-kO-jk4"/>
                         <viewControllerLayoutGuide type="bottom" id="ZUI-vv-YOE"/>
@@ -92,10 +92,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pJX-9F-mzb">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="360" minValue="1" maxValue="360" translatesAutoresizingMaskIntoConstraints="NO" id="pJX-9F-mzb">
                                 <rect key="frame" x="160" y="15" width="236" height="31"/>
                                 <connections>
-                                    <action selector="sliderAction:" destination="DCW-z9-JUs" eventType="valueChanged" id="Sqn-Yd-8CN"/>
+                                    <action selector="sliderAction:" destination="DCW-z9-JUs" eventType="valueChanged" id="JCB-1q-zkc"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last 360 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pj-Ju-aV6">
@@ -116,7 +116,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="84" id="3IT-KF-0Kj" customClass="EventCell" customModule="OurPlanet_10" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eventCell" rowHeight="84" id="3IT-KF-0Kj" customClass="EventCell" customModule="OurPlanet_10" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3IT-KF-0Kj" id="ah5-YE-pNI">
@@ -135,7 +135,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8h-yq-yu0">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8h-yq-yu0">
                                                     <rect key="frame" x="20" y="37.5" width="374" height="35.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -187,7 +187,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="daysLabel" destination="4Pj-Ju-aV6" id="6Nk-fS-iHK"/>
-                        <outlet property="slider" destination="pJX-9F-mzb" id="lFO-rC-wpE"/>
+                        <outlet property="slider" destination="pJX-9F-mzb" id="F8L-WQ-A1a"/>
                         <outlet property="tableView" destination="u5l-1J-heU" id="eR7-Wr-J8G"/>
                     </connections>
                 </viewController>

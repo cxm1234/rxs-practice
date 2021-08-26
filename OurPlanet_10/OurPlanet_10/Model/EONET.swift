@@ -22,16 +22,19 @@ class EONET {
     }
     
     static func filteredEvents(events: [EOEvent], forCategory category: EOCategory) -> [EOEvent] {
-        return events.filter { event in
-            return event.categories.contains(where: { $0.id == category.id }) &&
-                !category.events.contains {
-                    $0.id == event.id
-                }
-        }
-        .sorted(by: EOEvent.compareDates)
+        return events
+            .filter { event in
+                return event.categories.contains(where: { $0.id == category.id }) &&
+                    !category.events.contains {
+                        $0.id == event.id
+                    }
+            }
+            .sorted(by: EOEvent.compareDates)
     }
     
-    static func request<T: Decodable>(endpoint: String, query: [String: Any] = [:], contentIdentifier: String) -> Observable<T> {
+    static func request<T: Decodable>(endpoint: String,
+                                      query: [String: Any] = [:],
+                                      contentIdentifier: String) -> Observable<T> {
         do {
             guard let url = URL(string: API)?.appendingPathComponent(endpoint),
                   var components = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
@@ -69,18 +72,18 @@ class EONET {
         .share(replay: 1, scope: .forever)
     }()
     
-    private static func events(forLast days: Int, closed: Bool) -> Observable<[EOEvent]> {
+    private static func events(forLast days: Int, closed: Bool, endpoint: String) -> Observable<[EOEvent]> {
         let query: [String: Any] = [
             "days": days,
             "status": (closed ? "closed" : "open")
         ]
-        let request: Observable<[EOEvent]> = EONET.request(endpoint: eventsEndpoint, query: query, contentIdentifier: "events")
+        let request: Observable<[EOEvent]> = EONET.request(endpoint: endpoint, query: query, contentIdentifier: "events")
         return request.catchErrorJustReturn([])
     }
     
-    static func events(forLast days: Int = 360) -> Observable<[EOEvent]> {
-        let openEvents = events(forLast: days, closed: false)
-        let closedEvents = events(forLast: days, closed: true)
+    static func events(forLast days: Int = 360, category: EOCategory) -> Observable<[EOEvent]> {
+        let openEvents = events(forLast: days, closed: false, endpoint: category.endPoint)
+        let closedEvents = events(forLast: days, closed: true, endpoint: category.endPoint)
         return Observable.of(openEvents, closedEvents)
             .merge()
             .reduce([]) { running, new in

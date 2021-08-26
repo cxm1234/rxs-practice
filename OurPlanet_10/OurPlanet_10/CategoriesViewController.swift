@@ -18,19 +18,37 @@ class CategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        categories
+            .asObservable()
+            .subscribe(onNext: { [weak self] _ in
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            })
+            .disposed(by: disposeBag)
+        
         startDownload()
     }
     
     func startDownload() {
         let eoCategories = EONET.categories
-        let downloadedEvents = EONET.events(forLast: 360)
-        let updatedCategories = Observable.combineLatest(eoCategories, downloadedEvents) { (categories, events) -> [EOCategory] in
-            return categories.map { category in
-                var cat = category
-                cat.events = events.filter {
-                    $0.categories.contains(where: { $0.id == category.id })
+        let downloadedEvents = eoCategories.flatMap { categories in
+            return Observable.from(categories.map { category in
+                EONET.events(forLast: 360, category: category)
+            })
+        }
+        .merge(maxConcurrent: 2)
+        let updatedCategories = eoCategories.flatMap { categories in
+            downloadedEvents.scan(categories) { updated, events in
+                return updated.map { category in
+                    let eventsForCategory = EONET.filteredEvents(events: events, forCategory: category)
+                    if !eventsForCategory.isEmpty {
+                        var cat = category
+                        cat.events = cat.events + eventsForCategory
+                        return cat
+                    }
+                    return category
                 }
-                return cat
             }
         }
         
@@ -57,7 +75,15 @@ extension CategoriesViewController: UITableViewDataSource {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = categories.value[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard !category.events.isEmpty else { return }
+        let eventsController = storyboard!.instantiateViewController(withIdentifier: "events") as! EventsViewController
+        eventsController.title = category.name
+        eventsController.events.accept(category.events)
+        navigationController!.pushViewController(eventsController, animated: true)
+    }
 }
 
 extension CategoriesViewController: UITableViewDelegate {
