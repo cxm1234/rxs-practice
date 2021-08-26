@@ -14,9 +14,16 @@ class CategoriesViewController: UIViewController {
     let categories = BehaviorRelay<[EOCategory]>(value: [])
     let disposeBag = DisposeBag()
     
+    var activityIndicator: UIActivityIndicatorView!
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityIndicator = UIActivityIndicatorView()
+        activityIndicator.color = .black
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: activityIndicator)
+        activityIndicator.startAnimating()
         
         categories
             .asObservable()
@@ -51,6 +58,11 @@ class CategoriesViewController: UIViewController {
                 }
             }
         }
+        .do(onCompleted: { [weak self] in
+            DispatchQueue.main.async {
+                self?.activityIndicator.stopAnimating()
+            }
+        })
         
         eoCategories
             .concat(updatedCategories)
