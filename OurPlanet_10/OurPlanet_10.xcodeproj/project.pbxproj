@@ -16,6 +16,7 @@
 		D03ECFA526CD870500FE3ABA /* EOEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03ECFA426CD870500FE3ABA /* EOEnvelope.swift */; };
 		D04211B426C42AA400DC7B5F /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04211B326C42AA400DC7B5F /* EventsViewController.swift */; };
 		D04211B626C432DB00DC7B5F /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04211B526C432DB00DC7B5F /* EventCell.swift */; };
+		D0BE9A2926D7F07400E66B13 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BE9A2826D7F07400E66B13 /* DownloadView.swift */; };
 		D0C55A4626C17ADB00DA5F7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C55A4526C17ADB00DA5F7A /* AppDelegate.swift */; };
 		D0C55A4D26C17ADB00DA5F7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C55A4B26C17ADB00DA5F7A /* Main.storyboard */; };
 		D0C55A4F26C17ADD00DA5F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C55A4E26C17ADD00DA5F7A /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		D03ECFA426CD870500FE3ABA /* EOEnvelope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOEnvelope.swift; sourceTree = "<group>"; };
 		D04211B326C42AA400DC7B5F /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		D04211B526C432DB00DC7B5F /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		D0BE9A2826D7F07400E66B13 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
 		D0C55A4226C17ADB00DA5F7A /* OurPlanet_10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OurPlanet_10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C55A4526C17ADB00DA5F7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C55A4C26C17ADB00DA5F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				D0C55A4E26C17ADD00DA5F7A /* Assets.xcassets */,
 				D0C55A5026C17ADD00DA5F7A /* LaunchScreen.storyboard */,
 				D0C55A5326C17ADD00DA5F7A /* Info.plist */,
+				D0BE9A2826D7F07400E66B13 /* DownloadView.swift */,
 			);
 			path = OurPlanet_10;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				D00EE94226CD3B700092E04E /* EOEvent.swift in Sources */,
 				D00EE94426CD44DB0092E04E /* EOLocation.swift in Sources */,
 				D03ECFA526CD870500FE3ABA /* EOEnvelope.swift in Sources */,
+				D0BE9A2926D7F07400E66B13 /* DownloadView.swift in Sources */,
 				D0C55A7626C1835400DA5F7A /* CategoriesViewController.swift in Sources */,
 				D0C55A4626C17ADB00DA5F7A /* AppDelegate.swift in Sources */,
 				D04211B426C42AA400DC7B5F /* EventsViewController.swift in Sources */,
