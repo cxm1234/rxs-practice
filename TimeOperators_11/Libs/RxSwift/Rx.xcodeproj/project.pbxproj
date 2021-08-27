@@ -660,7 +660,6 @@
 		C89AB2381DAAC3A60065FBE6 /* _RX.m in Sources */ = {isa = PBXBuildFile; fileRef = C89AB22D1DAAC3A60065FBE6 /* _RX.m */; };
 		C89AB2401DAAC3A60065FBE6 /* _RXDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C89AB22F1DAAC3A60065FBE6 /* _RXDelegateProxy.m */; };
 		C89AB2481DAAC3A60065FBE6 /* _RXKVOObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C89AB2311DAAC3A60065FBE6 /* _RXKVOObserver.m */; };
-		C89AB2501DAAC3A60065FBE6 /* _RXObjCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = C89AB2331DAAC3A60065FBE6 /* _RXObjCRuntime.m */; };
 		C89AB25A1DAACC580065FBE6 /* _RX.h in Headers */ = {isa = PBXBuildFile; fileRef = C89AB2551DAACC580065FBE6 /* _RX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C89AB25E1DAACC580065FBE6 /* _RXDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C89AB2561DAACC580065FBE6 /* _RXDelegateProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C89AB2621DAACC580065FBE6 /* _RXKVOObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = C89AB2571DAACC580065FBE6 /* _RXKVOObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -680,7 +679,6 @@
 		C89CFA421DAABBE20079D23B /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89CFA1A1DAABBE20079D23B /* Subscription.swift */; };
 		C89CFA461DAABBE20079D23B /* TestableObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89CFA1B1DAABBE20079D23B /* TestableObservable.swift */; };
 		C89CFA4A1DAABBE20079D23B /* TestableObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89CFA1C1DAABBE20079D23B /* TestableObserver.swift */; };
-		C89CFA4E1DAABBE20079D23B /* XCTest+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89CFA1D1DAABBE20079D23B /* XCTest+Rx.swift */; };
 		C8A53AE01F09178700490535 /* Completable+AndThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A53ADF1F09178700490535 /* Completable+AndThen.swift */; };
 		C8A53AE51F09292A00490535 /* Completable+AndThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A53AE41F09292A00490535 /* Completable+AndThen.swift */; };
 		C8A53AE61F09292A00490535 /* Completable+AndThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A53AE41F09292A00490535 /* Completable+AndThen.swift */; };
@@ -3056,7 +3054,6 @@
 				C882542C1B8A752B00B02D69 /* UIGestureRecognizer+Rx.swift in Sources */,
 				C89AB1D21DAAC3350065FBE6 /* ControlProperty+Driver.swift in Sources */,
 				C8093EE11B8A732E0088E94D /* DelegateProxy.swift in Sources */,
-				C89AB2501DAAC3A60065FBE6 /* _RXObjCRuntime.m in Sources */,
 				C89AB21E1DAAC3350065FBE6 /* NSObject+Rx.swift in Sources */,
 				D9080AD41EA05DE9002B433B /* UINavigationController+Rx.swift in Sources */,
 				88718CFE1CE5D80000D88D60 /* UITabBar+Rx.swift in Sources */,
@@ -3609,7 +3606,6 @@
 				C820A9451EB4E06800D431BC /* Deprecated.swift in Sources */,
 				C89CFA321DAABBE20079D23B /* Recorded.swift in Sources */,
 				C89CFA4A1DAABBE20079D23B /* TestableObserver.swift in Sources */,
-				C89CFA4E1DAABBE20079D23B /* XCTest+Rx.swift in Sources */,
 				C89CFA361DAABBE20079D23B /* RxTest.swift in Sources */,
 				C89CFA261DAABBE20079D23B /* Event+Equatable.swift in Sources */,
 				C89CFA221DAABBE20079D23B /* ColdObservable.swift in Sources */,

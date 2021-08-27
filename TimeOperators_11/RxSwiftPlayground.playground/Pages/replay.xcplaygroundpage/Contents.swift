@@ -1,10 +1,13 @@
 import UIKit
 import RxSwift
+import RxCocoa
+
 
 // Start coding here
+
 let elementsPerSecond = 1
 let maxElements = 58
-let replyedElements = 1
+let replyedElements = 3
 let replayDelay: TimeInterval = 3
 
 let sourceObservable = Observable<Int>.create { observer in
@@ -20,7 +23,7 @@ let sourceObservable = Observable<Int>.create { observer in
         timer.suspend()
     }
 }
-.replay(replyedElements)
+.replayAll()
 
 let sourceTimeline = TimelineView<Int>.make()
 let replayedTimeline = TimelineView<Int>.make()
@@ -32,6 +35,8 @@ let stack = UIStackView.makeVertical([
     UILabel.make("Replay \(replyedElements) after \(replayDelay) sec:"),
     replayedTimeline
 ])
+
+_ = sourceObservable.subscribe(sourceTimeline)
 
 DispatchQueue.main.asyncAfter(deadline: .now() + replayDelay) {
     _ = sourceObservable.subscribe(replayedTimeline)
@@ -46,9 +51,7 @@ hostView
 // Support code -- DO NOT REMOVE
 class TimelineView<E>: TimelineViewBase, ObserverType where E: CustomStringConvertible {
   static func make() -> TimelineView<E> {
-    let view = TimelineView(frame: CGRect(x: 0, y: 0, width: 400, height: 100))
-    view.setup()
-    return view
+    return TimelineView(width: 400, height: 100)
   }
   public func on(_ event: Event<E>) {
     switch event {
@@ -61,7 +64,6 @@ class TimelineView<E>: TimelineViewBase, ObserverType where E: CustomStringConve
     }
   }
 }
-
 /// Copyright (c) 2020 Razeware LLC
 /// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy

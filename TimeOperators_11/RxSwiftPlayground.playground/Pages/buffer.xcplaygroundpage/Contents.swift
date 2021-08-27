@@ -2,14 +2,16 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-
 // Start coding here
+//let buffer
 
 
 // Support code -- DO NOT REMOVE
 class TimelineView<E>: TimelineViewBase, ObserverType where E: CustomStringConvertible {
   static func make() -> TimelineView<E> {
-    return TimelineView(width: 400, height: 100)
+    let view = TimelineView(frame: CGRect(x: 0, y: 0, width: 400, height: 100))
+    view.setup()
+    return view
   }
   public func on(_ event: Event<E>) {
     switch event {
@@ -22,6 +24,7 @@ class TimelineView<E>: TimelineViewBase, ObserverType where E: CustomStringConve
     }
   }
 }
+
 /// Copyright (c) 2020 Razeware LLC
 /// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
