@@ -4,6 +4,42 @@ import RxCocoa
 
 // Start coding here
 //let buffer
+let bufferTimeSpan: RxTimeInterval = .seconds(4)
+let bufferMaxCount = 3
+
+let sourceObservable = PublishSubject<String>()
+
+let sourceTimeline = TimelineView<String>.make()
+let bufferedTimeline = TimelineView<Int>.make()
+
+let stack = UIStackView.makeVertical([
+    UILabel.makeTitle("buffer"),
+    UILabel.make("Emitted elements:"),
+    sourceTimeline,
+    UILabel.make("Buffered elements (at most \(bufferMaxCount) every \(bufferTimeSpan) seconds:"),
+    bufferedTimeline
+])
+
+_ = sourceObservable.subscribe(sourceTimeline)
+
+sourceObservable
+    .buffer(
+        timeSpan: bufferTimeSpan,
+        count: bufferMaxCount,
+        scheduler: MainScheduler.instance
+    )
+    .map(\.count)
+    .subscribe(bufferedTimeline)
+    
+let hostView = setupHostView()
+hostView.addSubview(stack)
+hostView
+
+
+let elementsPerSecond = 1.0
+let timer = DispatchSource.timer(interval: 1.0 / Double(elementsPerSecond), queue: .main) {
+    sourceObservable.onNext("🐱")
+}
 
 
 // Support code -- DO NOT REMOVE
