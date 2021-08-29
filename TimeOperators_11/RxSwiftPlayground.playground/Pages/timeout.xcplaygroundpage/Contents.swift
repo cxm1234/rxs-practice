@@ -4,7 +4,6 @@ import RxCocoa
 
 
 // Start coding here
-
 let button = UIButton(type: .system)
 button.setTitle("Press me now!", for: .normal)
 button.sizeToFit()
