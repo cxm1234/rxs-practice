@@ -1,0 +1,6 @@
+framework module Pods_Wundercast_12_Wundercast_12UITests {
+  umbrella header "Pods-Wundercast_12-Wundercast_12UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

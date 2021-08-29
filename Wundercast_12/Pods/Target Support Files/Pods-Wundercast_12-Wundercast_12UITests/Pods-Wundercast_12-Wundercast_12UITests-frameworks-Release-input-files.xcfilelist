@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Wundercast_12-Wundercast_12UITests/Pods-Wundercast_12-Wundercast_12UITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework

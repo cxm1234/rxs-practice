@@ -1,0 +1,796 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		486A27E859988DA664ABACCE /* Pods_Wundercast_12_Wundercast_12UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AE134F89C8B77486E529F3 /* Pods_Wundercast_12_Wundercast_12UITests.framework */; };
+		B35DFB5F251F5C0B8EEB4FA7 /* Pods_Wundercast_12Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F73A19D6E1C813484FC96E /* Pods_Wundercast_12Tests.framework */; };
+		D09F387226DB202B00E9700C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F387126DB202B00E9700C /* AppDelegate.swift */; };
+		D09F387426DB202B00E9700C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F387326DB202B00E9700C /* SceneDelegate.swift */; };
+		D09F387626DB202B00E9700C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F387526DB202B00E9700C /* ViewController.swift */; };
+		D09F387926DB202B00E9700C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09F387726DB202B00E9700C /* Main.storyboard */; };
+		D09F387B26DB202D00E9700C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09F387A26DB202D00E9700C /* Assets.xcassets */; };
+		D09F387E26DB202D00E9700C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09F387C26DB202D00E9700C /* LaunchScreen.storyboard */; };
+		D09F388926DB202D00E9700C /* Wundercast_12Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F388826DB202D00E9700C /* Wundercast_12Tests.swift */; };
+		D09F389426DB202D00E9700C /* Wundercast_12UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F389326DB202D00E9700C /* Wundercast_12UITests.swift */; };
+		D09F38A526DB2F5800E9700C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F38A326DB2F5800E9700C /* Colors.swift */; };
+		D09F38A626DB2F5800E9700C /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F38A426DB2F5800E9700C /* Appearance.swift */; };
+		D09F38AA26DB2F7A00E9700C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D09F38A826DB2F7A00E9700C /* LICENSE */; };
+		D09F38AB26DB2F7A00E9700C /* weather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D09F38A926DB2F7A00E9700C /* weather.ttf */; };
+		D09F38AE26DB308C00E9700C /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F38AD26DB308C00E9700C /* ApiController.swift */; };
+		FDACFF5F02489C172B8059D0 /* Pods_Wundercast_12.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51BF7C3C97DB3B637F7F78CB /* Pods_Wundercast_12.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D09F388526DB202D00E9700C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D09F386626DB202B00E9700C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D09F386D26DB202B00E9700C;
+			remoteInfo = Wundercast_12;
+		};
+		D09F389026DB202D00E9700C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D09F386626DB202B00E9700C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D09F386D26DB202B00E9700C;
+			remoteInfo = Wundercast_12;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2250B303E6F43B372CA0386D /* Pods-Wundercast_12-Wundercast_12UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wundercast_12-Wundercast_12UITests.release.xcconfig"; path = "Target Support Files/Pods-Wundercast_12-Wundercast_12UITests/Pods-Wundercast_12-Wundercast_12UITests.release.xcconfig"; sourceTree = "<group>"; };
+		2E375C1C17A94DA72BFAA45B /* Pods-Wundercast_12.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wundercast_12.debug.xcconfig"; path = "Target Support Files/Pods-Wundercast_12/Pods-Wundercast_12.debug.xcconfig"; sourceTree = "<group>"; };
+		38EFDFCC01B58F6D5FE2942B /* Pods-Wundercast_12Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wundercast_12Tests.release.xcconfig"; path = "Target Support Files/Pods-Wundercast_12Tests/Pods-Wundercast_12Tests.release.xcconfig"; sourceTree = "<group>"; };
+		51BF7C3C97DB3B637F7F78CB /* Pods_Wundercast_12.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wundercast_12.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1BBC71381DEF6C92393D18 /* Pods-Wundercast_12-Wundercast_12UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wundercast_12-Wundercast_12UITests.debug.xcconfig"; path = "Target Support Files/Pods-Wundercast_12-Wundercast_12UITests/Pods-Wundercast_12-Wundercast_12UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A9AE134F89C8B77486E529F3 /* Pods_Wundercast_12_Wundercast_12UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wundercast_12_Wundercast_12UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09F386E26DB202B00E9700C /* Wundercast_12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wundercast_12.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09F387126DB202B00E9700C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D09F387326DB202B00E9700C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D09F387526DB202B00E9700C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D09F387826DB202B00E9700C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D09F387A26DB202D00E9700C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D09F387D26DB202D00E9700C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D09F387F26DB202D00E9700C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D09F388426DB202D00E9700C /* Wundercast_12Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Wundercast_12Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09F388826DB202D00E9700C /* Wundercast_12Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wundercast_12Tests.swift; sourceTree = "<group>"; };
+		D09F388A26DB202D00E9700C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D09F388F26DB202D00E9700C /* Wundercast_12UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Wundercast_12UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09F389326DB202D00E9700C /* Wundercast_12UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wundercast_12UITests.swift; sourceTree = "<group>"; };
+		D09F389526DB202D00E9700C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D09F38A326DB2F5800E9700C /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		D09F38A426DB2F5800E9700C /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		D09F38A826DB2F7A00E9700C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D09F38A926DB2F7A00E9700C /* weather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = weather.ttf; sourceTree = "<group>"; };
+		D09F38AD26DB308C00E9700C /* ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
+		D0F73A19D6E1C813484FC96E /* Pods_Wundercast_12Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wundercast_12Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5A619FACB17C2C3962F6942 /* Pods-Wundercast_12Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wundercast_12Tests.debug.xcconfig"; path = "Target Support Files/Pods-Wundercast_12Tests/Pods-Wundercast_12Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB520020B0E333E9E31E1163 /* Pods-Wundercast_12.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wundercast_12.release.xcconfig"; path = "Target Support Files/Pods-Wundercast_12/Pods-Wundercast_12.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D09F386B26DB202B00E9700C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDACFF5F02489C172B8059D0 /* Pods_Wundercast_12.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D09F388126DB202D00E9700C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B35DFB5F251F5C0B8EEB4FA7 /* Pods_Wundercast_12Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D09F388C26DB202D00E9700C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				486A27E859988DA664ABACCE /* Pods_Wundercast_12_Wundercast_12UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D878D326626E9D88C3FA0EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E375C1C17A94DA72BFAA45B /* Pods-Wundercast_12.debug.xcconfig */,
+				EB520020B0E333E9E31E1163 /* Pods-Wundercast_12.release.xcconfig */,
+				7D1BBC71381DEF6C92393D18 /* Pods-Wundercast_12-Wundercast_12UITests.debug.xcconfig */,
+				2250B303E6F43B372CA0386D /* Pods-Wundercast_12-Wundercast_12UITests.release.xcconfig */,
+				D5A619FACB17C2C3962F6942 /* Pods-Wundercast_12Tests.debug.xcconfig */,
+				38EFDFCC01B58F6D5FE2942B /* Pods-Wundercast_12Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CF06B870214AE78247DA6134 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51BF7C3C97DB3B637F7F78CB /* Pods_Wundercast_12.framework */,
+				A9AE134F89C8B77486E529F3 /* Pods_Wundercast_12_Wundercast_12UITests.framework */,
+				D0F73A19D6E1C813484FC96E /* Pods_Wundercast_12Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D09F386526DB202B00E9700C = {
+			isa = PBXGroup;
+			children = (
+				D09F387026DB202B00E9700C /* Wundercast_12 */,
+				D09F388726DB202D00E9700C /* Wundercast_12Tests */,
+				D09F389226DB202D00E9700C /* Wundercast_12UITests */,
+				D09F386F26DB202B00E9700C /* Products */,
+				6D878D326626E9D88C3FA0EF /* Pods */,
+				CF06B870214AE78247DA6134 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D09F386F26DB202B00E9700C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D09F386E26DB202B00E9700C /* Wundercast_12.app */,
+				D09F388426DB202D00E9700C /* Wundercast_12Tests.xctest */,
+				D09F388F26DB202D00E9700C /* Wundercast_12UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D09F387026DB202B00E9700C /* Wundercast_12 */ = {
+			isa = PBXGroup;
+			children = (
+				D09F38A726DB2F7A00E9700C /* Assets */,
+				D09F38A226DB2F5800E9700C /* Utils */,
+				D09F38AC26DB308C00E9700C /* Controllers */,
+				D09F387126DB202B00E9700C /* AppDelegate.swift */,
+				D09F387326DB202B00E9700C /* SceneDelegate.swift */,
+				D09F387526DB202B00E9700C /* ViewController.swift */,
+				D09F387726DB202B00E9700C /* Main.storyboard */,
+				D09F387A26DB202D00E9700C /* Assets.xcassets */,
+				D09F387C26DB202D00E9700C /* LaunchScreen.storyboard */,
+				D09F387F26DB202D00E9700C /* Info.plist */,
+			);
+			path = Wundercast_12;
+			sourceTree = "<group>";
+		};
+		D09F388726DB202D00E9700C /* Wundercast_12Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D09F388826DB202D00E9700C /* Wundercast_12Tests.swift */,
+				D09F388A26DB202D00E9700C /* Info.plist */,
+			);
+			path = Wundercast_12Tests;
+			sourceTree = "<group>";
+		};
+		D09F389226DB202D00E9700C /* Wundercast_12UITests */ = {
+			isa = PBXGroup;
+			children = (
+				D09F389326DB202D00E9700C /* Wundercast_12UITests.swift */,
+				D09F389526DB202D00E9700C /* Info.plist */,
+			);
+			path = Wundercast_12UITests;
+			sourceTree = "<group>";
+		};
+		D09F38A226DB2F5800E9700C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D09F38A326DB2F5800E9700C /* Colors.swift */,
+				D09F38A426DB2F5800E9700C /* Appearance.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D09F38A726DB2F7A00E9700C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D09F38A826DB2F7A00E9700C /* LICENSE */,
+				D09F38A926DB2F7A00E9700C /* weather.ttf */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D09F38AC26DB308C00E9700C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D09F38AD26DB308C00E9700C /* ApiController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D09F386D26DB202B00E9700C /* Wundercast_12 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D09F389826DB202D00E9700C /* Build configuration list for PBXNativeTarget "Wundercast_12" */;
+			buildPhases = (
+				97D8887F8D27AD2900B8FA37 /* [CP] Check Pods Manifest.lock */,
+				D09F386A26DB202B00E9700C /* Sources */,
+				D09F386B26DB202B00E9700C /* Frameworks */,
+				D09F386C26DB202B00E9700C /* Resources */,
+				F25737FBE8F6F02816694B5C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wundercast_12;
+			productName = Wundercast_12;
+			productReference = D09F386E26DB202B00E9700C /* Wundercast_12.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D09F388326DB202D00E9700C /* Wundercast_12Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D09F389B26DB202D00E9700C /* Build configuration list for PBXNativeTarget "Wundercast_12Tests" */;
+			buildPhases = (
+				3A7ABFF320BF91528405EB38 /* [CP] Check Pods Manifest.lock */,
+				D09F388026DB202D00E9700C /* Sources */,
+				D09F388126DB202D00E9700C /* Frameworks */,
+				D09F388226DB202D00E9700C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D09F388626DB202D00E9700C /* PBXTargetDependency */,
+			);
+			name = Wundercast_12Tests;
+			productName = Wundercast_12Tests;
+			productReference = D09F388426DB202D00E9700C /* Wundercast_12Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D09F388E26DB202D00E9700C /* Wundercast_12UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D09F389E26DB202D00E9700C /* Build configuration list for PBXNativeTarget "Wundercast_12UITests" */;
+			buildPhases = (
+				C6343B83C7085F71F3BDE58D /* [CP] Check Pods Manifest.lock */,
+				D09F388B26DB202D00E9700C /* Sources */,
+				D09F388C26DB202D00E9700C /* Frameworks */,
+				D09F388D26DB202D00E9700C /* Resources */,
+				3591804E160FF4CA1F5712EC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D09F389126DB202D00E9700C /* PBXTargetDependency */,
+			);
+			name = Wundercast_12UITests;
+			productName = Wundercast_12UITests;
+			productReference = D09F388F26DB202D00E9700C /* Wundercast_12UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D09F386626DB202B00E9700C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					D09F386D26DB202B00E9700C = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					D09F388326DB202D00E9700C = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = D09F386D26DB202B00E9700C;
+					};
+					D09F388E26DB202D00E9700C = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = D09F386D26DB202B00E9700C;
+					};
+				};
+			};
+			buildConfigurationList = D09F386926DB202B00E9700C /* Build configuration list for PBXProject "Wundercast_12" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D09F386526DB202B00E9700C;
+			productRefGroup = D09F386F26DB202B00E9700C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D09F386D26DB202B00E9700C /* Wundercast_12 */,
+				D09F388326DB202D00E9700C /* Wundercast_12Tests */,
+				D09F388E26DB202D00E9700C /* Wundercast_12UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D09F386C26DB202B00E9700C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D09F387E26DB202D00E9700C /* LaunchScreen.storyboard in Resources */,
+				D09F387B26DB202D00E9700C /* Assets.xcassets in Resources */,
+				D09F38AA26DB2F7A00E9700C /* LICENSE in Resources */,
+				D09F38AB26DB2F7A00E9700C /* weather.ttf in Resources */,
+				D09F387926DB202B00E9700C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D09F388226DB202D00E9700C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D09F388D26DB202D00E9700C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3591804E160FF4CA1F5712EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wundercast_12-Wundercast_12UITests/Pods-Wundercast_12-Wundercast_12UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wundercast_12-Wundercast_12UITests/Pods-Wundercast_12-Wundercast_12UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wundercast_12-Wundercast_12UITests/Pods-Wundercast_12-Wundercast_12UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A7ABFF320BF91528405EB38 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wundercast_12Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97D8887F8D27AD2900B8FA37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wundercast_12-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6343B83C7085F71F3BDE58D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wundercast_12-Wundercast_12UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F25737FBE8F6F02816694B5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wundercast_12/Pods-Wundercast_12-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wundercast_12/Pods-Wundercast_12-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wundercast_12/Pods-Wundercast_12-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D09F386A26DB202B00E9700C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D09F38A626DB2F5800E9700C /* Appearance.swift in Sources */,
+				D09F387626DB202B00E9700C /* ViewController.swift in Sources */,
+				D09F38AE26DB308C00E9700C /* ApiController.swift in Sources */,
+				D09F38A526DB2F5800E9700C /* Colors.swift in Sources */,
+				D09F387226DB202B00E9700C /* AppDelegate.swift in Sources */,
+				D09F387426DB202B00E9700C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D09F388026DB202D00E9700C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D09F388926DB202D00E9700C /* Wundercast_12Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D09F388B26DB202D00E9700C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D09F389426DB202D00E9700C /* Wundercast_12UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D09F388626DB202D00E9700C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D09F386D26DB202B00E9700C /* Wundercast_12 */;
+			targetProxy = D09F388526DB202D00E9700C /* PBXContainerItemProxy */;
+		};
+		D09F389126DB202D00E9700C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D09F386D26DB202B00E9700C /* Wundercast_12 */;
+			targetProxy = D09F389026DB202D00E9700C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D09F387726DB202B00E9700C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D09F387826DB202B00E9700C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D09F387C26DB202D00E9700C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D09F387D26DB202D00E9700C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D09F389626DB202D00E9700C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D09F389726DB202D00E9700C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D09F389926DB202D00E9700C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E375C1C17A94DA72BFAA45B /* Pods-Wundercast_12.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HWPJQHW6K7;
+				INFOPLIST_FILE = Wundercast_12/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.huami.com.Wundercast-12";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D09F389A26DB202D00E9700C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB520020B0E333E9E31E1163 /* Pods-Wundercast_12.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HWPJQHW6K7;
+				INFOPLIST_FILE = Wundercast_12/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.huami.com.Wundercast-12";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D09F389C26DB202D00E9700C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5A619FACB17C2C3962F6942 /* Pods-Wundercast_12Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HWPJQHW6K7;
+				INFOPLIST_FILE = Wundercast_12Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.huami.com.Wundercast-12Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wundercast_12.app/Wundercast_12";
+			};
+			name = Debug;
+		};
+		D09F389D26DB202D00E9700C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38EFDFCC01B58F6D5FE2942B /* Pods-Wundercast_12Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HWPJQHW6K7;
+				INFOPLIST_FILE = Wundercast_12Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.huami.com.Wundercast-12Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wundercast_12.app/Wundercast_12";
+			};
+			name = Release;
+		};
+		D09F389F26DB202D00E9700C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D1BBC71381DEF6C92393D18 /* Pods-Wundercast_12-Wundercast_12UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HWPJQHW6K7;
+				INFOPLIST_FILE = Wundercast_12UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.huami.com.Wundercast-12UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wundercast_12;
+			};
+			name = Debug;
+		};
+		D09F38A026DB202D00E9700C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2250B303E6F43B372CA0386D /* Pods-Wundercast_12-Wundercast_12UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HWPJQHW6K7;
+				INFOPLIST_FILE = Wundercast_12UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.huami.com.Wundercast-12UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wundercast_12;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D09F386926DB202B00E9700C /* Build configuration list for PBXProject "Wundercast_12" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D09F389626DB202D00E9700C /* Debug */,
+				D09F389726DB202D00E9700C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D09F389826DB202D00E9700C /* Build configuration list for PBXNativeTarget "Wundercast_12" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D09F389926DB202D00E9700C /* Debug */,
+				D09F389A26DB202D00E9700C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D09F389B26DB202D00E9700C /* Build configuration list for PBXNativeTarget "Wundercast_12Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D09F389C26DB202D00E9700C /* Debug */,
+				D09F389D26DB202D00E9700C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D09F389E26DB202D00E9700C /* Build configuration list for PBXNativeTarget "Wundercast_12UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D09F389F26DB202D00E9700C /* Debug */,
+				D09F38A026DB202D00E9700C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D09F386626DB202B00E9700C /* Project object */;
+}
