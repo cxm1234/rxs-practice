@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var tempSwitch: UISwitch!
     
     private let bag = DisposeBag()
     
@@ -22,43 +23,50 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         style()
-        ApiController.shared.currentWeather(for: "London")
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { data in
-                self.tempLabel.text = "\(data.temperature)℃"
-                self.iconLabel.text = data.icon
-                self.humidityLabel.text = "\(data.humidity)%"
-                self.cityNameLabel.text = data.cityName
-            })
-            .disposed(by: bag)
         
-        let search = searchCityName.rx.text.orEmpty
+        let textSearch = searchCityName.rx.controlEvent(.editingDidEndOnExit).asObservable()
+        let temperature = tempSwitch.rx.controlEvent(.valueChanged).asObservable()
+        
+        let search = Observable
+            .merge(textSearch, temperature)
+            .map { self.searchCityName.text ?? "" }
             .filter { !$0.isEmpty }
             .flatMapLatest{ text in
                 ApiController.shared
                     .currentWeather(for: text)
                     .catchErrorJustReturn(.empty)
             }
-            .share(replay: 1)
-            .observeOn(MainScheduler.instance)
+            .asDriver(onErrorJustReturn: .empty)
         
-        search.map { "\($0.temperature)℃" }
-            .bind(to: tempLabel.rx.text)
+        search
+            .map{ w in
+                if self.tempSwitch.isOn {
+                    return "\(Int(Double(w.temperature) * 1.8 + 32))℉"
+                }else {
+                    return "\(w.temperature)℃"
+                }
+            }
+            .drive(tempLabel.rx.text)
             .disposed(by: bag)
         
         search.map(\.icon)
-            .bind(to: cityNameLabel.rx.text)
+            .drive(cityNameLabel.rx.text)
             .disposed(by: bag)
         
         search.map { "\($0.humidity)%"}
-            .bind(to: humidityLabel.rx.text)
+            .drive(humidityLabel.rx.text)
             .disposed(by: bag)
         
         search.map(\.cityName)
-            .bind(to: cityNameLabel.rx.text)
+            .drive(cityNameLabel.rx.text)
             .disposed(by: bag)
         
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
+        Appearance.applyBottomLine(to: searchCityName)
     }
 
     private func style() {
