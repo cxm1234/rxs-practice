@@ -15,7 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var cityNameLabel: UILabel!
-    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var geoLocationButton: UIButton!
+    @IBOutlet weak var mapButton: UIButton!
     private let bag = DisposeBag()
     
     override func viewDidLoad() {
@@ -47,7 +49,24 @@ class ViewController: UIViewController {
         
         running
             .skip(1)
-//            .drive(activ)
+            .drive(activityIndicator.rx.isAnimating)
+            .disposed(by: bag)
+        
+        running
+            .drive(tempLabel.rx.isHidden)
+            .disposed(by: bag)
+        
+        running
+            .drive(iconLabel.rx.isHidden)
+            .disposed(by: bag)
+        
+        running
+            .drive(humidityLabel.rx.isHidden)
+            .disposed(by: bag)
+        
+        running
+            .drive(cityNameLabel.rx.isHidden)
+            .disposed(by: bag)
         
         search.map{ "\($0.temperature)℃" }
             .drive(tempLabel.rx.text)

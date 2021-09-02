@@ -56,28 +56,63 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xBG-JQ-7DA">
+                                <rect key="frame" x="0.0" y="140" width="414" height="659"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fet-kW-YDQ">
+                                <rect key="frame" x="20" y="807" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8If-Rc-Y2x"/>
+                                    <constraint firstAttribute="width" constant="44" id="i3A-5S-iGc"/>
+                                </constraints>
+                                <state key="normal" image="place-location"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aud-Q7-2UI">
+                                <rect key="frame" x="309" y="807" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="s7B-6X-1eq"/>
+                                    <constraint firstAttribute="height" constant="44" id="xcf-RI-OuZ"/>
+                                </constraints>
+                                <state key="normal" image="map"/>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="qZW-5k-qZu">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="7Ar-ka-NyM" firstAttribute="top" secondItem="fet-kW-YDQ" secondAttribute="bottom" constant="11" id="1Rf-fU-0QF"/>
                             <constraint firstItem="uTv-Zd-oRa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="2US-Zh-48T"/>
                             <constraint firstItem="GL6-Rv-Mpl" firstAttribute="trailing" secondItem="uTv-Zd-oRa" secondAttribute="trailing" id="2wg-iz-MZi"/>
                             <constraint firstItem="Nn5-UL-WG3" firstAttribute="top" secondItem="nBT-ZQ-OZk" secondAttribute="bottom" constant="16" id="4FS-gJ-Rj3"/>
                             <constraint firstItem="Dik-0N-0o7" firstAttribute="centerX" secondItem="Nn5-UL-WG3" secondAttribute="centerX" id="7AP-co-Kqh"/>
                             <constraint firstItem="uTv-Zd-oRa" firstAttribute="top" secondItem="GL6-Rv-Mpl" secondAttribute="bottom" constant="8" id="EYu-FZ-rNy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Aud-Q7-2UI" secondAttribute="trailing" constant="41" id="Hus-aT-eb4"/>
+                            <constraint firstItem="xBG-JQ-7DA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Iy5-8N-3Wg"/>
+                            <constraint firstItem="7Ar-ka-NyM" firstAttribute="top" secondItem="Aud-Q7-2UI" secondAttribute="bottom" constant="11" id="Mde-kK-bcz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nn5-UL-WG3" secondAttribute="trailing" id="O8S-lF-apW"/>
+                            <constraint firstAttribute="trailing" secondItem="xBG-JQ-7DA" secondAttribute="trailing" id="Q2p-Gb-Ick"/>
                             <constraint firstItem="uTv-Zd-oRa" firstAttribute="leading" secondItem="pVq-gj-FeW" secondAttribute="leading" id="SJT-PR-g6c"/>
                             <constraint firstItem="uTv-Zd-oRa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="Tbp-g0-QF2"/>
                             <constraint firstItem="Dik-0N-0o7" firstAttribute="top" secondItem="uTv-Zd-oRa" secondAttribute="bottom" constant="8" id="Tow-TC-JmU"/>
                             <constraint firstItem="Dik-0N-0o7" firstAttribute="width" secondItem="Nn5-UL-WG3" secondAttribute="width" id="Xwf-Zn-xk8"/>
+                            <constraint firstItem="xBG-JQ-7DA" firstAttribute="top" secondItem="Nn5-UL-WG3" secondAttribute="bottom" constant="32" id="abg-XV-k4N"/>
                             <constraint firstItem="Nn5-UL-WG3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bFU-Cq-jNr"/>
+                            <constraint firstItem="qZW-5k-qZu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cLz-t5-ii0"/>
+                            <constraint firstItem="fet-kW-YDQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gbu-a0-uA5"/>
+                            <constraint firstItem="Aud-Q7-2UI" firstAttribute="top" secondItem="xBG-JQ-7DA" secondAttribute="bottom" constant="8" id="heM-rq-QXY"/>
                             <constraint firstItem="uTv-Zd-oRa" firstAttribute="top" secondItem="pVq-gj-FeW" secondAttribute="bottom" constant="8" id="qBm-de-Lo1"/>
+                            <constraint firstItem="qZW-5k-qZu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uvS-Hp-ThB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uTv-Zd-oRa" secondAttribute="trailing" constant="32" id="xio-1S-EgE"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="qZW-5k-qZu" id="7R0-xu-yZ8"/>
                         <outlet property="cityNameLabel" destination="Dik-0N-0o7" id="kuk-xz-Vau"/>
+                        <outlet property="geoLocationButton" destination="fet-kW-YDQ" id="BrA-bs-PVG"/>
                         <outlet property="humidityLabel" destination="GL6-Rv-Mpl" id="vj6-nr-CRV"/>
                         <outlet property="iconLabel" destination="uTv-Zd-oRa" id="1XF-U8-EJa"/>
+                        <outlet property="mapButton" destination="Aud-Q7-2UI" id="4Nk-X1-UQO"/>
                         <outlet property="searchCityName" destination="Nn5-UL-WG3" id="JaU-4k-Jv9"/>
                         <outlet property="tempLabel" destination="pVq-gj-FeW" id="bFZ-Yu-8pX"/>
                     </connections>
@@ -88,6 +123,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="map" width="32" height="31"/>
+        <image name="place-location" width="24" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
