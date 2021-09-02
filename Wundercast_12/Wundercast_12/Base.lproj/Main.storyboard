@@ -56,43 +56,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xyl-If-462">
-                                <rect key="frame" x="182.5" y="823" width="51" height="31"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqX-ma-oXt">
-                                <rect key="frame" x="162.5" y="828" width="12" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gd-8s-S7b">
-                                <rect key="frame" x="239.5" y="828" width="10" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Xyl-If-462" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1mu-Jd-2hj"/>
                             <constraint firstItem="uTv-Zd-oRa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="2US-Zh-48T"/>
                             <constraint firstItem="GL6-Rv-Mpl" firstAttribute="trailing" secondItem="uTv-Zd-oRa" secondAttribute="trailing" id="2wg-iz-MZi"/>
                             <constraint firstItem="Nn5-UL-WG3" firstAttribute="top" secondItem="nBT-ZQ-OZk" secondAttribute="bottom" constant="16" id="4FS-gJ-Rj3"/>
                             <constraint firstItem="Dik-0N-0o7" firstAttribute="centerX" secondItem="Nn5-UL-WG3" secondAttribute="centerX" id="7AP-co-Kqh"/>
-                            <constraint firstItem="3gd-8s-S7b" firstAttribute="centerY" secondItem="Xyl-If-462" secondAttribute="centerY" id="DYB-n8-qNU"/>
                             <constraint firstItem="uTv-Zd-oRa" firstAttribute="top" secondItem="GL6-Rv-Mpl" secondAttribute="bottom" constant="8" id="EYu-FZ-rNy"/>
-                            <constraint firstItem="Xyl-If-462" firstAttribute="leading" secondItem="qqX-ma-oXt" secondAttribute="trailing" constant="8" id="FtF-Y1-M12"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nn5-UL-WG3" secondAttribute="trailing" id="O8S-lF-apW"/>
                             <constraint firstItem="uTv-Zd-oRa" firstAttribute="leading" secondItem="pVq-gj-FeW" secondAttribute="leading" id="SJT-PR-g6c"/>
                             <constraint firstItem="uTv-Zd-oRa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="Tbp-g0-QF2"/>
                             <constraint firstItem="Dik-0N-0o7" firstAttribute="top" secondItem="uTv-Zd-oRa" secondAttribute="bottom" constant="8" id="Tow-TC-JmU"/>
                             <constraint firstItem="Dik-0N-0o7" firstAttribute="width" secondItem="Nn5-UL-WG3" secondAttribute="width" id="Xwf-Zn-xk8"/>
                             <constraint firstItem="Nn5-UL-WG3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bFU-Cq-jNr"/>
-                            <constraint firstItem="7Ar-ka-NyM" firstAttribute="top" secondItem="Xyl-If-462" secondAttribute="bottom" constant="8" id="mJe-RA-rOM"/>
                             <constraint firstItem="uTv-Zd-oRa" firstAttribute="top" secondItem="pVq-gj-FeW" secondAttribute="bottom" constant="8" id="qBm-de-Lo1"/>
-                            <constraint firstItem="qqX-ma-oXt" firstAttribute="centerY" secondItem="Xyl-If-462" secondAttribute="centerY" id="u6e-r5-izz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uTv-Zd-oRa" secondAttribute="trailing" constant="32" id="xio-1S-EgE"/>
-                            <constraint firstItem="3gd-8s-S7b" firstAttribute="leading" secondItem="Xyl-If-462" secondAttribute="trailing" constant="8" id="yT2-Em-WD1"/>
                         </constraints>
                     </view>
                     <connections>
@@ -101,7 +80,6 @@
                         <outlet property="iconLabel" destination="uTv-Zd-oRa" id="1XF-U8-EJa"/>
                         <outlet property="searchCityName" destination="Nn5-UL-WG3" id="JaU-4k-Jv9"/>
                         <outlet property="tempLabel" destination="pVq-gj-FeW" id="bFZ-Yu-8pX"/>
-                        <outlet property="tempSwitch" destination="Xyl-If-462" id="8Zj-8w-e6f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var cityNameLabel: UILabel!
-    @IBOutlet weak var tempSwitch: UISwitch!
     
     private let bag = DisposeBag()
     
@@ -24,13 +23,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         style()
         
-        let textSearch = searchCityName.rx.controlEvent(.editingDidEndOnExit).asObservable()
-        let temperature = tempSwitch.rx.controlEvent(.valueChanged).asObservable()
-        
-        let search = Observable
-            .merge(textSearch, temperature)
+        let searchInput = searchCityName.rx
+            .controlEvent(.editingDidEndOnExit)
             .map { self.searchCityName.text ?? "" }
             .filter { !$0.isEmpty }
+        
+        
+        let search = searchInput
             .flatMapLatest{ text in
                 ApiController.shared
                     .currentWeather(for: text)
@@ -38,14 +37,19 @@ class ViewController: UIViewController {
             }
             .asDriver(onErrorJustReturn: .empty)
         
-        search
-            .map{ w in
-                if self.tempSwitch.isOn {
-                    return "\(Int(Double(w.temperature) * 1.8 + 32))℉"
-                }else {
-                    return "\(w.temperature)℃"
-                }
-            }
+        
+        let running = Observable.merge(
+            searchInput.map{ _ in true },
+            search.map { _ in false }.asObservable()
+        )
+        .startWith(true)
+        .asDriver(onErrorJustReturn: false)
+        
+        running
+            .skip(1)
+//            .drive(activ)
+        
+        search.map{ "\($0.temperature)℃" }
             .drive(tempLabel.rx.text)
             .disposed(by: bag)
         
