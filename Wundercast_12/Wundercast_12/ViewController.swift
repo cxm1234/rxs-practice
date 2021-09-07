@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import CoreLocation
 
 class ViewController: UIViewController {
     @IBOutlet weak var searchCityName: UITextField!
@@ -19,6 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var geoLocationButton: UIButton!
     @IBOutlet weak var mapButton: UIButton!
     private let bag = DisposeBag()
+    
+    private let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +85,15 @@ class ViewController: UIViewController {
         
         search.map(\.cityName)
             .drive(cityNameLabel.rx.text)
+            .disposed(by: bag)
+        
+        geoLocationButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else { return }
+                
+                self.locationManager.requestWhenInUseAuthorization()
+                self.locationManager.startUpdatingLocation()
+            })
             .disposed(by: bag)
         
     }
