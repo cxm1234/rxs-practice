@@ -113,6 +113,7 @@
                         <outlet property="humidityLabel" destination="GL6-Rv-Mpl" id="vj6-nr-CRV"/>
                         <outlet property="iconLabel" destination="uTv-Zd-oRa" id="1XF-U8-EJa"/>
                         <outlet property="mapButton" destination="Aud-Q7-2UI" id="4Nk-X1-UQO"/>
+                        <outlet property="mapView" destination="xBG-JQ-7DA" id="MkL-w3-wBS"/>
                         <outlet property="searchCityName" destination="Nn5-UL-WG3" id="JaU-4k-Jv9"/>
                         <outlet property="tempLabel" destination="pVq-gj-FeW" id="bFZ-Yu-8pX"/>
                     </connections>
