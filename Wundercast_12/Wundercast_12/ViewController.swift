@@ -87,15 +87,20 @@ class ViewController: UIViewController {
             .drive(cityNameLabel.rx.text)
             .disposed(by: bag)
         
-        geoLocationButton.rx.tap
-            .subscribe(onNext: { [weak self] in
-                guard let self = self else { return }
-                
-                self.locationManager.requestWhenInUseAuthorization()
-                self.locationManager.startUpdatingLocation()
-            })
-            .disposed(by: bag)
+        let geoSearch = geoLocationButton.rx.tap
+            .flatMapLatest { _ in
+                self.locationManager.rx.getCurrentLocation()
+            }
+            .flatMapLatest { location in
+                ApiController.shared
+                    .currentWeather(at: location.coordinate)
+                    .catchErrorJustReturn(.empty)
+            }
         
+        let textSearch = searchInput.flatMap { city in
+            ApiController.shared
+                .currentWeather(for: .city)
+        }
     }
     
     override func viewDidLayoutSubviews() {
