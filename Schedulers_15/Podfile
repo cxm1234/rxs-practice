@@ -8,4 +8,13 @@ target 'Schedulers_15' do
   # Pods for Schedulers_15
   pod 'RxSwift', '5.1.1'
 
+  target 'Schedulers_15Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Schedulers_15UITests' do
+    # Pods for testing
+  end
+
 end

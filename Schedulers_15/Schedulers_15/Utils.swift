@@ -31,7 +31,7 @@ extension ObservableType {
     func dump() -> Observable<Element> {
         return self.do(onNext: { element in
             let threadName = getThreadName()
-            print("\(secondsElapsed())s | [S] \(element) received on \(threadName)")
+            print("\(secondsElapsed())s | [E] \(element) emitted on \(threadName)")
         })
     }
     

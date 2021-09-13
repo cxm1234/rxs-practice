@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Schedulers_15VersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Schedulers_15VersionString[];
+FOUNDATION_EXPORT double Pods_Schedulers_15_Schedulers_15UITestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Schedulers_15_Schedulers_15UITestsVersionString[];
 

@@ -61,11 +61,13 @@
 		4A3BC74A39DD9F94D2039DED3A249F39 /* ScheduledItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79BD93B78C57B260531DFB7D42FF8F /* ScheduledItemType.swift */; };
 		4B977AF9351B133CFD08FACC8980D63B /* SkipUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9CAE39048B038E682C8AB9D98C187 /* SkipUntil.swift */; };
 		4D89B922561BF30DD82310F3DBA382E3 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B3D7612D47600239E07B098DE2C070 /* Range.swift */; };
+		4E92C81E55972226A7DA21143387FA00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		51DDC5068CFEBB05E762F7903EEB0BFE /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74892E945C9CD914EEBB86799BBAF93D /* Errors.swift */; };
 		52B62146A0506511C33FFE21D479F098 /* Take.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB00D86776BFAC6D9EF3EB0B226A0F5 /* Take.swift */; };
 		53483D2813CBD2559B61BB8ECEEBB720 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0040569DD7630992FA7190F1147F0D0 /* Event.swift */; };
 		5362ED50B5BAD017EE00B8CDF153E405 /* StartWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1B561879C2F0B353950A89E0BE6C8A /* StartWith.swift */; };
-		55A4E0A6CB8CD7925403C4BC9010124B /* Pods-Schedulers_15-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B694C157859EE114E6BFE30F7F98DB2F /* Pods-Schedulers_15-dummy.m */; };
+		55A4E0A6CB8CD7925403C4BC9010124B /* Pods-Schedulers_15-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0C46F16D14B355DFA41EE6F2481352 /* Pods-Schedulers_15-dummy.m */; };
+		562EB0672080925F1B212FA35B7A419F /* Pods-Schedulers_15Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06EB02EC9F6A37BB6BF0899864AA8548 /* Pods-Schedulers_15Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		58A01985DC698B916413DFC8CFDC2D93 /* Skip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BDE6D594BA5155C09D2A35D0BD1F /* Skip.swift */; };
 		5A067882BD23845EB07ED3D99A244D01 /* ObserverType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DE2D1866CBC8D3F7083F3D03CFD7E /* ObserverType.swift */; };
 		5AF7D6515D4F38DB9C5110D3613D1C81 /* Date+Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3C87A037A3A3B4AF2A11E136C9D00 /* Date+Dispatch.swift */; };
@@ -80,9 +82,9 @@
 		663FBF04C43B60ECCCA30A13E899CA2D /* TailRecursiveSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8CF92E6D16ADB9A0806DC35B4C688C /* TailRecursiveSink.swift */; };
 		675BD3AE56F03E1939BE3F90CB4CA7A4 /* Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016DBA0392A14C8404C442B049A35B33 /* Switch.swift */; };
 		69B872C9E966769F53F257A41550A8D8 /* SingleAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5E574D7FA4F0DE0206F5F9734DFE5F /* SingleAsync.swift */; };
+		6BAA7EB382E61F680375B1B075EFBCB2 /* Pods-Schedulers_15Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9233D5F4CC0507D80C3335098D974182 /* Pods-Schedulers_15Tests-dummy.m */; };
 		6EF7C0FBE2C46F810047240C17A7B785 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C97B63D9F2BBCADA31604F562628F3A /* Deprecated.swift */; };
 		71365E9EEF335AC0D44445C0F05B878F /* BehaviorSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081183C7BF3EC9C446BFE09AAB28175 /* BehaviorSubject.swift */; };
-		720EDA3CE6847DF2CF7802D5EA591B7B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
 		726773AA835622512AF1EE0A7CBA352C /* Enumerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127703DABB62654A73D68F6D0D87FC5 /* Enumerated.swift */; };
 		7287792889178704A9CA725170E8D5EB /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4D15E32F2ED9244D993F2E757D7B66 /* Just.swift */; };
 		73D261440078A6DFDF40396E07612E5A /* DispatchQueue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F653C4735CEEFE2C1C5761D94B0E088 /* DispatchQueue+Extensions.swift */; };
@@ -134,13 +136,16 @@
 		C7BD84A884673DD45D788B284CE4DFA6 /* SynchronizedUnsubscribeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895202852115C4210D69D3A11EE4717C /* SynchronizedUnsubscribeType.swift */; };
 		C8546C4EB10EAC109460308021CA718C /* VirtualTimeConverterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4735C48365B69E38D5A7EEDF445EA8CF /* VirtualTimeConverterType.swift */; };
 		C9533C80832CC3B2580C808D816B9EA8 /* AnonymousDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B102864BDDF293718158EB75A60BFD29 /* AnonymousDisposable.swift */; };
-		CBAFC1ECB0F8436B907E0AD1A1C2866E /* Pods-Schedulers_15-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82634244E46206BF49347A9EF0DE2472 /* Pods-Schedulers_15-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA99420F39612DB4D403277121EDE4C2 /* Pods-Schedulers_15-Schedulers_15UITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1CA8B703F304EEA62E24049E4E2D3C5 /* Pods-Schedulers_15-Schedulers_15UITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBAFC1ECB0F8436B907E0AD1A1C2866E /* Pods-Schedulers_15-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F05CBCE0D475F7540D7A9C03EE3C3FC /* Pods-Schedulers_15-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC74E97D48A46F54146A1746679335F0 /* SchedulerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422DE3886BE7991CA33BCFB7C62C19A /* SchedulerType.swift */; };
 		CED380635575FFCE8BD164BA255AE139 /* CurrentThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC1B002B06FA466DB506CC6832BBF6 /* CurrentThreadScheduler.swift */; };
 		D04E136F7EB38AC7982E586CC551CCF6 /* ToArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA969F434D30A4CDF29DFFD434BEB2 /* ToArray.swift */; };
 		D1A4EE598EC6F041DC1F8D1C4A037E75 /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA5BC915E246AAE9DD35D747F85A63 /* Reactive.swift */; };
 		D25E7D0AE33E2E5F1A0776A70A71E809 /* ObservableConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448363AB6A02A949BE3B848F86CBE76 /* ObservableConvertibleType.swift */; };
+		D438D66541E31653DB629EC886B424A3 /* Pods-Schedulers_15-Schedulers_15UITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE3F0915364346803196970F1ADD60E /* Pods-Schedulers_15-Schedulers_15UITests-dummy.m */; };
 		D5D35C4D80982CF4DEA8F8CA28E7F9B3 /* RetryWhen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9142909A84E4ABB7D12248AFE657336 /* RetryWhen.swift */; };
+		D8BBBF1DE5F42CCC5ED4A24AF58EF800 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		DDB8588E6E16473ACB1BBF4E90C5BB37 /* AnyObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC324F969A9E3514174AE19D61E76E1 /* AnyObserver.swift */; };
 		DE8725535F4E94F5FD00282E9E24E160 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400649C28B8CF067D12645686A8DB74 /* Optional.swift */; };
 		DEFB359FB6836F5D3B5A87ACFF2488DF /* AsSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F28D9F20A16B04FFC535E0A0C94A9B7 /* AsSingle.swift */; };
@@ -158,15 +163,30 @@
 		F011372633695C8A45D695B02BF514E5 /* Disposables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62553100848034E4B49CD362DC7B1CE5 /* Disposables.swift */; };
 		F0C81DE470D29695790035820C904F4B /* Multicast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332C97533ACEB295C115C9BC0EF9AEFB /* Multicast.swift */; };
 		F126DAB49F8EB48A414DED3CBCDDBDF0 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB8559CFBE19A901E8C3523C8DB8009 /* Debug.swift */; };
+		F2A7706087C289E377656173EEF1BDC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		F54EED2366383AA126EA608AE74C78E4 /* Completable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C105A8D41B5AEFD058BEF79A56B5F1 /* Completable.swift */; };
 		F80F4022491C57DE67E998E14DD94C1C /* TakeWhile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5940BA09E5CBBC60087291D800ACC316 /* TakeWhile.swift */; };
 		F8BEA00F44E234087637654C306B497B /* SingleAssignmentDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40B49BECCC4C124D3728A35AAD21CE4 /* SingleAssignmentDisposable.swift */; };
-		FD75D141BAE533B1F9E3E4E7982FF351 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */; };
+		F9670BCC8F93A39C0579C194F75579A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		FD80F935EE17E0875BBE838A29648B06 /* SerialDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0574FF52B74E086102A43DBFD9864875 /* SerialDisposable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5D61420C6B6BD3601C5B3DD71884A219 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7232DDF4ACC2DE92AB6ED2492E117810;
+			remoteInfo = "Pods-Schedulers_15";
+		};
 		AB390B7C2219B2CC64D8F75B792B40B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA9EA43B3B503823EE36C60D9C8A865F;
+			remoteInfo = RxSwift;
+		};
+		E3C82D42C99394AAB63ED19203CFF01E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -182,6 +202,8 @@
 		0574FF52B74E086102A43DBFD9864875 /* SerialDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SerialDisposable.swift; path = RxSwift/Disposables/SerialDisposable.swift; sourceTree = "<group>"; };
 		05BC62EE14F69B8BDF758E3FBCAFFE42 /* Sink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sink.swift; path = RxSwift/Observables/Sink.swift; sourceTree = "<group>"; };
 		0617DF59F6A77978A72533EA0C8A4424 /* OperationQueueScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OperationQueueScheduler.swift; path = RxSwift/Schedulers/OperationQueueScheduler.swift; sourceTree = "<group>"; };
+		06EB02EC9F6A37BB6BF0899864AA8548 /* Pods-Schedulers_15Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Schedulers_15Tests-umbrella.h"; sourceTree = "<group>"; };
+		0829A60E3D43BDEC9C20B3A6BDA35F76 /* Pods-Schedulers_15-Schedulers_15UITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Schedulers_15-Schedulers_15UITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		09684D67F0357B4821A277973170D711 /* Platform.Linux.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Platform.Linux.swift; path = Platform/Platform.Linux.swift; sourceTree = "<group>"; };
 		0A34C961156300A6F4463183B90AFFB8 /* Scan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Scan.swift; path = RxSwift/Observables/Scan.swift; sourceTree = "<group>"; };
 		0B98C5DEA16615E2B561836E9B16C5A2 /* ElementAt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ElementAt.swift; path = RxSwift/Observables/ElementAt.swift; sourceTree = "<group>"; };
@@ -189,6 +211,7 @@
 		0CEBAF3105B357C039B209E1ED10C950 /* DelaySubscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelaySubscription.swift; path = RxSwift/Observables/DelaySubscription.swift; sourceTree = "<group>"; };
 		0E4F2B8CA4E2E5732B6C708C6A49C74C /* ShareReplayScope.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShareReplayScope.swift; path = RxSwift/Observables/ShareReplayScope.swift; sourceTree = "<group>"; };
 		0E5B5276D765D9EFE4637EF64094A9A4 /* SerialDispatchQueueScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SerialDispatchQueueScheduler.swift; path = RxSwift/Schedulers/SerialDispatchQueueScheduler.swift; sourceTree = "<group>"; };
+		0EC248C799E3EB8868BF9ED2AAA792C2 /* Pods-Schedulers_15-Schedulers_15UITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Schedulers_15-Schedulers_15UITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		10B41A79A897BB693AEFC2CC134B9F35 /* DispatchQueueConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DispatchQueueConfiguration.swift; path = RxSwift/Schedulers/Internal/DispatchQueueConfiguration.swift; sourceTree = "<group>"; };
 		13CCD2EE1665CA7258CFB7C278471276 /* BooleanDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BooleanDisposable.swift; path = RxSwift/Disposables/BooleanDisposable.swift; sourceTree = "<group>"; };
 		13CE7D57DF982D057F1459F278E89496 /* Throttle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Throttle.swift; path = RxSwift/Observables/Throttle.swift; sourceTree = "<group>"; };
@@ -203,40 +226,45 @@
 		20400F006335B3B2CA8DBFE83F32EB6D /* VirtualTimeScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VirtualTimeScheduler.swift; path = RxSwift/Schedulers/VirtualTimeScheduler.swift; sourceTree = "<group>"; };
 		234008E5F0A18BB3A810015B579E872F /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = RxSwift/Observables/Error.swift; sourceTree = "<group>"; };
 		2457A24B5AD753D96C433A79A034E836 /* LockOwnerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LockOwnerType.swift; path = RxSwift/Concurrency/LockOwnerType.swift; sourceTree = "<group>"; };
+		247E426664CB421C8237CFD1F49940E9 /* Pods-Schedulers_15Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Schedulers_15Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		255613083CD897AF6249E7358133EE9A /* InvocableScheduledItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InvocableScheduledItem.swift; path = RxSwift/Schedulers/Internal/InvocableScheduledItem.swift; sourceTree = "<group>"; };
 		263524AC17B084F99B575E9A79F48B40 /* DistinctUntilChanged.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DistinctUntilChanged.swift; path = RxSwift/Observables/DistinctUntilChanged.swift; sourceTree = "<group>"; };
 		2A5D4A2F1A4F366E70BE47CE593B2B6C /* InfiniteSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfiniteSequence.swift; path = Platform/DataStructures/InfiniteSequence.swift; sourceTree = "<group>"; };
 		2AAE5984BF5D8503299181182FC9590F /* Observable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = RxSwift/Observable.swift; sourceTree = "<group>"; };
 		2C33144E18224E961E3FFBCF1166992F /* Single.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Single.swift; path = RxSwift/Traits/Single.swift; sourceTree = "<group>"; };
 		2C98F68C1958481E81149CC7C112B9DB /* InvocableType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InvocableType.swift; path = RxSwift/Schedulers/Internal/InvocableType.swift; sourceTree = "<group>"; };
+		2CFAB2F95ED3ACD2C7F8884502350FF9 /* Pods-Schedulers_15.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Schedulers_15.release.xcconfig"; sourceTree = "<group>"; };
+		2D2F2484EC8A55E3AFAA7735533030D0 /* Pods-Schedulers_15-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Schedulers_15-frameworks.sh"; sourceTree = "<group>"; };
 		2E4D15E32F2ED9244D993F2E757D7B66 /* Just.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Just.swift; path = RxSwift/Observables/Just.swift; sourceTree = "<group>"; };
 		2E76B5CFFEC139C44F1603F5FF06D58F /* RxMutableBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxMutableBox.swift; path = RxSwift/RxMutableBox.swift; sourceTree = "<group>"; };
-		2EFFEA9333AACC02B0E7A488BAE33709 /* Pods-Schedulers_15.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Schedulers_15.release.xcconfig"; sourceTree = "<group>"; };
 		2F1337A90573F5E3DF5FD68E7E36C238 /* ReplaySubject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaySubject.swift; path = RxSwift/Subjects/ReplaySubject.swift; sourceTree = "<group>"; };
-		2F27B047889A05F73C1580418C82CCFA /* Pods-Schedulers_15.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Schedulers_15.modulemap"; sourceTree = "<group>"; };
 		2F6530CB1D536EB15A40D51F3C6FA554 /* PriorityQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PriorityQueue.swift; path = Platform/DataStructures/PriorityQueue.swift; sourceTree = "<group>"; };
 		31D9BE117F1D2B00EADCB7B28AE424E8 /* Dematerialize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dematerialize.swift; path = RxSwift/Observables/Dematerialize.swift; sourceTree = "<group>"; };
 		32093E94E81634E192190E0B91402566 /* RxSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RxSwift-prefix.pch"; sourceTree = "<group>"; };
 		332C97533ACEB295C115C9BC0EF9AEFB /* Multicast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Multicast.swift; path = RxSwift/Observables/Multicast.swift; sourceTree = "<group>"; };
 		343B8110FFC9AFA9288AB25F46AA24A9 /* WithLatestFrom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WithLatestFrom.swift; path = RxSwift/Observables/WithLatestFrom.swift; sourceTree = "<group>"; };
 		36BE2A52EDB9A1762F8D36377BF6760A /* PrimitiveSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrimitiveSequence.swift; path = RxSwift/Traits/PrimitiveSequence.swift; sourceTree = "<group>"; };
-		370860073CE17B2DA7BC44060AADFC23 /* Pods-Schedulers_15-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Schedulers_15-Info.plist"; sourceTree = "<group>"; };
 		375716E42BC37855AFC5B1577332258B /* ImmediateSchedulerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImmediateSchedulerType.swift; path = RxSwift/ImmediateSchedulerType.swift; sourceTree = "<group>"; };
+		39FA026E4B1AFDDB9D9265FC358A1B15 /* Pods-Schedulers_15Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Schedulers_15Tests"; path = Pods_Schedulers_15Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1B561879C2F0B353950A89E0BE6C8A /* StartWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StartWith.swift; path = RxSwift/Observables/StartWith.swift; sourceTree = "<group>"; };
+		3ACD243F5E6BE76D0E3B49AD850767A7 /* Pods-Schedulers_15-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Schedulers_15-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3B90785A185C2F77A3928945E9E51E73 /* Buffer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Buffer.swift; path = RxSwift/Observables/Buffer.swift; sourceTree = "<group>"; };
 		3BBE0C367174A6019207048B9BB74216 /* ObservableType+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ObservableType+Extensions.swift"; path = "RxSwift/ObservableType+Extensions.swift"; sourceTree = "<group>"; };
+		3DE3B4D157F406BB624482CE0EE7635F /* Pods-Schedulers_15.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Schedulers_15.modulemap"; sourceTree = "<group>"; };
 		3EE6BD908DCE499537336E74DB71ACE1 /* Zip+arity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Zip+arity.swift"; path = "RxSwift/Observables/Zip+arity.swift"; sourceTree = "<group>"; };
+		3F05CBCE0D475F7540D7A9C03EE3C3FC /* Pods-Schedulers_15-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Schedulers_15-umbrella.h"; sourceTree = "<group>"; };
 		3F0E748F79EC66D7B6CD883E0F2F1846 /* CombineLatest+Collection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CombineLatest+Collection.swift"; path = "RxSwift/Observables/CombineLatest+Collection.swift"; sourceTree = "<group>"; };
 		4010C4319060D5C13D8EE523EB8DC3B1 /* ObservableType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObservableType.swift; path = RxSwift/ObservableType.swift; sourceTree = "<group>"; };
 		40DA84C45FE3127F7A3A1F438E3ECDAF /* PrimitiveSequence+Zip+arity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PrimitiveSequence+Zip+arity.swift"; path = "RxSwift/Traits/PrimitiveSequence+Zip+arity.swift"; sourceTree = "<group>"; };
 		45D4BDE6D594BA5155C09D2A35D0BD1F /* Skip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Skip.swift; path = RxSwift/Observables/Skip.swift; sourceTree = "<group>"; };
 		4661AE3AB42538A40E275D75CBF87364 /* Window.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Window.swift; path = RxSwift/Observables/Window.swift; sourceTree = "<group>"; };
 		4735C48365B69E38D5A7EEDF445EA8CF /* VirtualTimeConverterType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VirtualTimeConverterType.swift; path = RxSwift/Schedulers/VirtualTimeConverterType.swift; sourceTree = "<group>"; };
+		48408E0FEF7DBA2BB22CCC6367E0F88E /* Pods-Schedulers_15.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Schedulers_15.debug.xcconfig"; sourceTree = "<group>"; };
 		48768AA503436ED6A2C9784B1448AF5F /* Empty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Empty.swift; path = RxSwift/Observables/Empty.swift; sourceTree = "<group>"; };
+		48822046901177C26A3F65B04C3CDED2 /* Pods-Schedulers_15-Schedulers_15UITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Schedulers_15-Schedulers_15UITests.modulemap"; sourceTree = "<group>"; };
 		48FA568A2F77F51E0479C3876532647C /* ConnectableObservableType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectableObservableType.swift; path = RxSwift/ConnectableObservableType.swift; sourceTree = "<group>"; };
 		4D22688D7DB37350CD065D7E32F84968 /* ObservableType+PrimitiveSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ObservableType+PrimitiveSequence.swift"; path = "RxSwift/Traits/ObservableType+PrimitiveSequence.swift"; sourceTree = "<group>"; };
 		4E79CCE77A6E071BE3F6BB595C85D3B7 /* DisposeBag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DisposeBag.swift; path = RxSwift/Disposables/DisposeBag.swift; sourceTree = "<group>"; };
-		535E27CBF90DC5B4F6E1A4C20E2CAC19 /* Pods-Schedulers_15-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Schedulers_15-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5448363AB6A02A949BE3B848F86CBE76 /* ObservableConvertibleType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObservableConvertibleType.swift; path = RxSwift/ObservableConvertibleType.swift; sourceTree = "<group>"; };
 		54C561C87188446B36DC95CF18E9D8E3 /* Sample.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sample.swift; path = RxSwift/Observables/Sample.swift; sourceTree = "<group>"; };
 		56B3D7612D47600239E07B098DE2C070 /* Range.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Range.swift; path = RxSwift/Observables/Range.swift; sourceTree = "<group>"; };
@@ -244,6 +272,7 @@
 		5AC324F969A9E3514174AE19D61E76E1 /* AnyObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyObserver.swift; path = RxSwift/AnyObserver.swift; sourceTree = "<group>"; };
 		5C97B63D9F2BBCADA31604F562628F3A /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = RxSwift/Deprecated.swift; sourceTree = "<group>"; };
 		5D93E02D3691EACDC00DA7C87C20A78F /* BinaryDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryDisposable.swift; path = RxSwift/Disposables/BinaryDisposable.swift; sourceTree = "<group>"; };
+		5E90881C4A3E64521D02416B92A41CB7 /* Pods-Schedulers_15Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Schedulers_15Tests.release.xcconfig"; sourceTree = "<group>"; };
 		619E7B295F4910AD88CB9EB3F611424C /* RecursiveLock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecursiveLock.swift; path = Platform/RecursiveLock.swift; sourceTree = "<group>"; };
 		62553100848034E4B49CD362DC7B1CE5 /* Disposables.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Disposables.swift; path = RxSwift/Disposables/Disposables.swift; sourceTree = "<group>"; };
 		6486B88F3F6ADE1ABE817D8F57FA7F84 /* Cancelable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cancelable.swift; path = RxSwift/Cancelable.swift; sourceTree = "<group>"; };
@@ -257,15 +286,17 @@
 		72543FEE4DF1AB534E7C888943A0E7F8 /* RxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxSwift.debug.xcconfig; sourceTree = "<group>"; };
 		72F6D582D860DF853C07B0C441BB1933 /* SynchronizedDisposeType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SynchronizedDisposeType.swift; path = RxSwift/Concurrency/SynchronizedDisposeType.swift; sourceTree = "<group>"; };
 		72F6EB86F8B135D795A48A676F189E53 /* Delay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delay.swift; path = RxSwift/Observables/Delay.swift; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		74892E945C9CD914EEBB86799BBAF93D /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = RxSwift/Errors.swift; sourceTree = "<group>"; };
 		74D21441DD778833EB6B80B4FD95C2EA /* TakeLast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TakeLast.swift; path = RxSwift/Observables/TakeLast.swift; sourceTree = "<group>"; };
+		78A94F4FAC0936E967E18C6901A30FC9 /* Pods-Schedulers_15Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Schedulers_15Tests.modulemap"; sourceTree = "<group>"; };
 		7B3FFD6751BEC8EFA64B990BCA6B5982 /* RxSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RxSwift-Info.plist"; sourceTree = "<group>"; };
 		7BB00D86776BFAC6D9EF3EB0B226A0F5 /* Take.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Take.swift; path = RxSwift/Observables/Take.swift; sourceTree = "<group>"; };
 		7DB9590574DB43E0EA6B78C020A2EF9E /* Generate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Generate.swift; path = RxSwift/Observables/Generate.swift; sourceTree = "<group>"; };
 		7FA9BE101BEFD34E4ED31FF06563569F /* RxSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RxSwift-dummy.m"; sourceTree = "<group>"; };
+		80438436382D1306019939FBD312BEA6 /* Pods-Schedulers_15-Schedulers_15UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Schedulers_15-Schedulers_15UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		809C5FAB588354C9BA37DC3EAB8CB45C /* RxSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RxSwift; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8204776BB8ED1A4798171FA6DD8E827A /* Timeout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeout.swift; path = RxSwift/Observables/Timeout.swift; sourceTree = "<group>"; };
-		82634244E46206BF49347A9EF0DE2472 /* Pods-Schedulers_15-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Schedulers_15-umbrella.h"; sourceTree = "<group>"; };
 		832CFC678BE10F23DC5AD97635D1B23B /* CombineLatest+arity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CombineLatest+arity.swift"; path = "RxSwift/Observables/CombineLatest+arity.swift"; sourceTree = "<group>"; };
 		847360E5A9FDF95AAA44B31FD7AA30B7 /* CompactMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompactMap.swift; path = RxSwift/Observables/CompactMap.swift; sourceTree = "<group>"; };
 		849DE2D1866CBC8D3F7083F3D03CFD7E /* ObserverType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObserverType.swift; path = RxSwift/ObserverType.swift; sourceTree = "<group>"; };
@@ -277,12 +308,14 @@
 		8F48514EBADD891C1AF0AA373FFCBD37 /* AsMaybe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsMaybe.swift; path = RxSwift/Observables/AsMaybe.swift; sourceTree = "<group>"; };
 		8F653C4735CEEFE2C1C5761D94B0E088 /* DispatchQueue+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Extensions.swift"; path = "Platform/DispatchQueue+Extensions.swift"; sourceTree = "<group>"; };
 		8F8F8D8727829E3E382E4D6B48DD4A85 /* Zip+Collection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Zip+Collection.swift"; path = "RxSwift/Observables/Zip+Collection.swift"; sourceTree = "<group>"; };
+		9233D5F4CC0507D80C3335098D974182 /* Pods-Schedulers_15Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Schedulers_15Tests-dummy.m"; sourceTree = "<group>"; };
 		92A9A91E91335814672137A8AC244F64 /* SwitchIfEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchIfEmpty.swift; path = RxSwift/Observables/SwitchIfEmpty.swift; sourceTree = "<group>"; };
 		92C1CD3B54B48C74FD4CC2F6467E09C4 /* NopDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NopDisposable.swift; path = RxSwift/Disposables/NopDisposable.swift; sourceTree = "<group>"; };
 		933442905D39D7E2228CCA26F379A6AC /* CombineLatest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombineLatest.swift; path = RxSwift/Observables/CombineLatest.swift; sourceTree = "<group>"; };
 		93DBED5E3BDC88D36E44F5894EF0BD71 /* PublishSubject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PublishSubject.swift; path = RxSwift/Subjects/PublishSubject.swift; sourceTree = "<group>"; };
 		9422DE3886BE7991CA33BCFB7C62C19A /* SchedulerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SchedulerType.swift; path = RxSwift/SchedulerType.swift; sourceTree = "<group>"; };
 		94666B6B1953BBD30240E6E1E15B5F21 /* RecursiveScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecursiveScheduler.swift; path = RxSwift/Schedulers/RecursiveScheduler.swift; sourceTree = "<group>"; };
+		959E18A9934014A9907B3209426BC060 /* Pods-Schedulers_15-Schedulers_15UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Schedulers_15-Schedulers_15UITests.release.xcconfig"; sourceTree = "<group>"; };
 		967D83A0E418153A02AA2FBC8DC5C35C /* Sequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sequence.swift; path = RxSwift/Observables/Sequence.swift; sourceTree = "<group>"; };
 		96FDC6AA2CAEA111FBE69B4798F616A8 /* Bag+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bag+Rx.swift"; path = "RxSwift/Extensions/Bag+Rx.swift"; sourceTree = "<group>"; };
 		9B537560AF39A92944BA7A2D00C9A855 /* AnonymousObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnonymousObserver.swift; path = RxSwift/Observers/AnonymousObserver.swift; sourceTree = "<group>"; };
@@ -295,27 +328,28 @@
 		A3CBEF8B7DC5EC4EBEDF38FCAE6AC04D /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = RxSwift/SwiftSupport/SwiftSupport.swift; sourceTree = "<group>"; };
 		A400649C28B8CF067D12645686A8DB74 /* Optional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Optional.swift; path = RxSwift/Observables/Optional.swift; sourceTree = "<group>"; };
 		A4C84E2B20199C598A44745815CD19D4 /* AddRef.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AddRef.swift; path = RxSwift/Observables/AddRef.swift; sourceTree = "<group>"; };
+		A60A1F6266910366620983FD315A13FF /* Pods-Schedulers_15Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Schedulers_15Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A944CCE75B53210B9599DE857C8569AD /* Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rx.swift; path = RxSwift/Rx.swift; sourceTree = "<group>"; };
-		AD92525DD631B96A48BB5E0A10D8993D /* Pods-Schedulers_15-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Schedulers_15-frameworks.sh"; sourceTree = "<group>"; };
 		AFC3C87A037A3A3B4AF2A11E136C9D00 /* Date+Dispatch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Dispatch.swift"; path = "RxSwift/Date+Dispatch.swift"; sourceTree = "<group>"; };
 		B102864BDDF293718158EB75A60BFD29 /* AnonymousDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnonymousDisposable.swift; path = RxSwift/Disposables/AnonymousDisposable.swift; sourceTree = "<group>"; };
+		B1CA8B703F304EEA62E24049E4E2D3C5 /* Pods-Schedulers_15-Schedulers_15UITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Schedulers_15-Schedulers_15UITests-umbrella.h"; sourceTree = "<group>"; };
 		B282F6E0CF9066971858C438AAAC4222 /* Producer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Producer.swift; path = RxSwift/Observables/Producer.swift; sourceTree = "<group>"; };
 		B2DE1E94D0B6629CD249ECECE5B36FB8 /* Never.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Never.swift; path = RxSwift/Observables/Never.swift; sourceTree = "<group>"; };
 		B40B49BECCC4C124D3728A35AAD21CE4 /* SingleAssignmentDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleAssignmentDisposable.swift; path = RxSwift/Disposables/SingleAssignmentDisposable.swift; sourceTree = "<group>"; };
-		B694C157859EE114E6BFE30F7F98DB2F /* Pods-Schedulers_15-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Schedulers_15-dummy.m"; sourceTree = "<group>"; };
 		B6C105A8D41B5AEFD058BEF79A56B5F1 /* Completable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Completable.swift; path = RxSwift/Traits/Completable.swift; sourceTree = "<group>"; };
 		BD62BB4788A103520C504358F41DBC02 /* GroupBy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupBy.swift; path = RxSwift/Observables/GroupBy.swift; sourceTree = "<group>"; };
 		BE2A4F68237C4B4043BA5B5AE90BE105 /* ConcurrentMainScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConcurrentMainScheduler.swift; path = RxSwift/Schedulers/ConcurrentMainScheduler.swift; sourceTree = "<group>"; };
 		BFB09F8DAD8848F8FBF27AF9053A1FFB /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = RxSwift/Observables/Filter.swift; sourceTree = "<group>"; };
 		C081183C7BF3EC9C446BFE09AAB28175 /* BehaviorSubject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BehaviorSubject.swift; path = RxSwift/Subjects/BehaviorSubject.swift; sourceTree = "<group>"; };
-		C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		C228E06350B8F809CBA547CAD77B3EB4 /* Using.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Using.swift; path = RxSwift/Observables/Using.swift; sourceTree = "<group>"; };
 		C238CFF9670A52F8A91751AF7372CF08 /* SchedulerServices+Emulation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SchedulerServices+Emulation.swift"; path = "RxSwift/Schedulers/SchedulerServices+Emulation.swift"; sourceTree = "<group>"; };
-		C2FE92A9AA2954B585E9DC573A9E699F /* Pods-Schedulers_15-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Schedulers_15-acknowledgements.plist"; sourceTree = "<group>"; };
 		C5D538DDDA98A717799F3103F3002E4C /* DisposeBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DisposeBase.swift; path = RxSwift/Disposables/DisposeBase.swift; sourceTree = "<group>"; };
 		C7CC1B002B06FA466DB506CC6832BBF6 /* CurrentThreadScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurrentThreadScheduler.swift; path = RxSwift/Schedulers/CurrentThreadScheduler.swift; sourceTree = "<group>"; };
+		C8045F57E9926898EC8CBC80B96EC244 /* Pods-Schedulers_15-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Schedulers_15-acknowledgements.plist"; sourceTree = "<group>"; };
+		C8A75D0FD4E4638A96BD5A034520AD17 /* Pods-Schedulers_15Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Schedulers_15Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA7CFE51069A56EE0CF1283852CB10C1 /* SubscribeOn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubscribeOn.swift; path = RxSwift/Observables/SubscribeOn.swift; sourceTree = "<group>"; };
 		CAD79660FA939F163AA5FB66815022AA /* Maybe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Maybe.swift; path = RxSwift/Traits/Maybe.swift; sourceTree = "<group>"; };
+		CAE3F0915364346803196970F1ADD60E /* Pods-Schedulers_15-Schedulers_15UITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Schedulers_15-Schedulers_15UITests-dummy.m"; sourceTree = "<group>"; };
 		CDF0711F6C0B8A17599ABD7730C7514E /* DefaultIfEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultIfEmpty.swift; path = RxSwift/Observables/DefaultIfEmpty.swift; sourceTree = "<group>"; };
 		D0040569DD7630992FA7190F1147F0D0 /* Event.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Event.swift; path = RxSwift/Event.swift; sourceTree = "<group>"; };
 		D0B521DC5D7841192F8A41117F7F1F8B /* ObserveOn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObserveOn.swift; path = RxSwift/Observables/ObserveOn.swift; sourceTree = "<group>"; };
@@ -324,6 +358,7 @@
 		D5906F87762ADD646A35058C0BDFFF27 /* Timer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = RxSwift/Observables/Timer.swift; sourceTree = "<group>"; };
 		D636DA8CB09EB405DF53E61C722A5EEC /* Create.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Create.swift; path = RxSwift/Observables/Create.swift; sourceTree = "<group>"; };
 		DB56B59E5FF53EE8128FC3799E0FE70D /* TakeUntil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TakeUntil.swift; path = RxSwift/Observables/TakeUntil.swift; sourceTree = "<group>"; };
+		DC115BA5ED20E12D36E200D26E942227 /* Pods-Schedulers_15-Schedulers_15UITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Schedulers_15-Schedulers_15UITests-Info.plist"; sourceTree = "<group>"; };
 		DC2BB18948E173ED26FF48D4063AF5C1 /* RxSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RxSwift-umbrella.h"; sourceTree = "<group>"; };
 		DD3FF9448BAC67E8BA8864D4864FAFCE /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = RxSwift/Observables/Map.swift; sourceTree = "<group>"; };
 		DE15F09A91C87421CF2937CDE96C2447 /* Deferred.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deferred.swift; path = RxSwift/Observables/Deferred.swift; sourceTree = "<group>"; };
@@ -335,39 +370,70 @@
 		E38F264F5FAADC3DAE901044739039F6 /* Platform.Darwin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Platform.Darwin.swift; path = Platform/Platform.Darwin.swift; sourceTree = "<group>"; };
 		E5762EBA181E901D8EB6F6EDCA2B7286 /* Completable+AndThen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Completable+AndThen.swift"; path = "RxSwift/Traits/Completable+AndThen.swift"; sourceTree = "<group>"; };
 		E5957C3F24982F3442C0BED687E54C72 /* Do.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Do.swift; path = RxSwift/Observables/Do.swift; sourceTree = "<group>"; };
-		E8AFD835EBB417DADBA05D47D1D06D7E /* Pods-Schedulers_15.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Schedulers_15.debug.xcconfig"; sourceTree = "<group>"; };
 		E97CB160A833F9893BDB6E7232970AAD /* SubjectType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubjectType.swift; path = RxSwift/Subjects/SubjectType.swift; sourceTree = "<group>"; };
 		E9C701B5F9BD3DB3BEDA857E70BD16DA /* Disposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Disposable.swift; path = RxSwift/Disposable.swift; sourceTree = "<group>"; };
+		EB7C3030D17AB4CCEDA83B505D8F6FBE /* Pods-Schedulers_15-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Schedulers_15-Info.plist"; sourceTree = "<group>"; };
+		EF0C46F16D14B355DFA41EE6F2481352 /* Pods-Schedulers_15-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Schedulers_15-dummy.m"; sourceTree = "<group>"; };
 		F11564CC2C3F0B9F0E7349D6D4F06A6A /* SkipWhile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkipWhile.swift; path = RxSwift/Observables/SkipWhile.swift; sourceTree = "<group>"; };
 		F2D1083382A9684CAB1C2B91EFBBF4A2 /* Debounce.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debounce.swift; path = RxSwift/Observables/Debounce.swift; sourceTree = "<group>"; };
+		F53ADC4BA38F1F8C2DFCC11564753415 /* Pods-Schedulers_15Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Schedulers_15Tests-Info.plist"; sourceTree = "<group>"; };
 		F7F7AC0437DEDF293DDAF0CF262B6EE8 /* ConcurrentDispatchQueueScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConcurrentDispatchQueueScheduler.swift; path = RxSwift/Schedulers/ConcurrentDispatchQueueScheduler.swift; sourceTree = "<group>"; };
 		F9142909A84E4ABB7D12248AFE657336 /* RetryWhen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryWhen.swift; path = RxSwift/Observables/RetryWhen.swift; sourceTree = "<group>"; };
 		F9534E00EA8F104500E0F1DC1070016F /* ScheduledDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScheduledDisposable.swift; path = RxSwift/Disposables/ScheduledDisposable.swift; sourceTree = "<group>"; };
+		F9D811A243999CDCC96984D45A365F1E /* Pods-Schedulers_15-Schedulers_15UITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Schedulers_15-Schedulers_15UITests"; path = Pods_Schedulers_15_Schedulers_15UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC6F49562AED1008829384B3BF25648E /* Pods-Schedulers_15-Schedulers_15UITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Schedulers_15-Schedulers_15UITests-frameworks.sh"; sourceTree = "<group>"; };
 		FCA6A3BD67AA983EDC80467A0EF1917E /* ScheduledItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScheduledItem.swift; path = RxSwift/Schedulers/Internal/ScheduledItem.swift; sourceTree = "<group>"; };
 		FCF837F41EE9566524D97B261B02AA95 /* Repeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Repeat.swift; path = RxSwift/Observables/Repeat.swift; sourceTree = "<group>"; };
 		FFB8559CFBE19A901E8C3523C8DB8009 /* Debug.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debug.swift; path = RxSwift/Observables/Debug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0ABCD602F756C206642783C5C83B8FD8 /* Frameworks */ = {
+		181EF09C68EB2A7E9A10876C1AF45166 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				720EDA3CE6847DF2CF7802D5EA591B7B /* Cocoa.framework in Frameworks */,
+				D8BBBF1DE5F42CCC5ED4A24AF58EF800 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2F1D24AF0B2A9518E74E67DAE7B2E7E9 /* Frameworks */ = {
+		306374B73CDBDF44AB568CFE416D454A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD75D141BAE533B1F9E3E4E7982FF351 /* Cocoa.framework in Frameworks */,
+				F2A7706087C289E377656173EEF1BDC9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0CD260DD361300B7C671CCCFA7947AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9670BCC8F93A39C0579C194F75579A7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8457F310721F31345D920D125905D4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E92C81E55972226A7DA21143387FA00 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		483F5209B19539385EC50E953F265C23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2FE119CAD5F53228A31CBFA364657EA /* Pods-Schedulers_15 */,
+				F9D811A243999CDCC96984D45A365F1E /* Pods-Schedulers_15-Schedulers_15UITests */,
+				39FA026E4B1AFDDB9D9265FC358A1B15 /* Pods-Schedulers_15Tests */,
+				809C5FAB588354C9BA37DC3EAB8CB45C /* RxSwift */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4DB4E15E273D488C49157D7345E96C3F /* RxSwift */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,6 +593,14 @@
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		59C65D12A66CD9D7BFEE915694839731 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,30 +609,48 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		5CA826C5179379536F0A960B86625048 /* Products */ = {
+		81E471B621DDBB69000EAC08695BD07A /* Pods-Schedulers_15 */ = {
 			isa = PBXGroup;
 			children = (
-				D2FE119CAD5F53228A31CBFA364657EA /* Pods-Schedulers_15 */,
-				809C5FAB588354C9BA37DC3EAB8CB45C /* RxSwift */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		682A90C2A686638A74125A8A2B837CA8 /* Pods-Schedulers_15 */ = {
-			isa = PBXGroup;
-			children = (
-				2F27B047889A05F73C1580418C82CCFA /* Pods-Schedulers_15.modulemap */,
-				535E27CBF90DC5B4F6E1A4C20E2CAC19 /* Pods-Schedulers_15-acknowledgements.markdown */,
-				C2FE92A9AA2954B585E9DC573A9E699F /* Pods-Schedulers_15-acknowledgements.plist */,
-				B694C157859EE114E6BFE30F7F98DB2F /* Pods-Schedulers_15-dummy.m */,
-				AD92525DD631B96A48BB5E0A10D8993D /* Pods-Schedulers_15-frameworks.sh */,
-				370860073CE17B2DA7BC44060AADFC23 /* Pods-Schedulers_15-Info.plist */,
-				82634244E46206BF49347A9EF0DE2472 /* Pods-Schedulers_15-umbrella.h */,
-				E8AFD835EBB417DADBA05D47D1D06D7E /* Pods-Schedulers_15.debug.xcconfig */,
-				2EFFEA9333AACC02B0E7A488BAE33709 /* Pods-Schedulers_15.release.xcconfig */,
+				3DE3B4D157F406BB624482CE0EE7635F /* Pods-Schedulers_15.modulemap */,
+				3ACD243F5E6BE76D0E3B49AD850767A7 /* Pods-Schedulers_15-acknowledgements.markdown */,
+				C8045F57E9926898EC8CBC80B96EC244 /* Pods-Schedulers_15-acknowledgements.plist */,
+				EF0C46F16D14B355DFA41EE6F2481352 /* Pods-Schedulers_15-dummy.m */,
+				2D2F2484EC8A55E3AFAA7735533030D0 /* Pods-Schedulers_15-frameworks.sh */,
+				EB7C3030D17AB4CCEDA83B505D8F6FBE /* Pods-Schedulers_15-Info.plist */,
+				3F05CBCE0D475F7540D7A9C03EE3C3FC /* Pods-Schedulers_15-umbrella.h */,
+				48408E0FEF7DBA2BB22CCC6367E0F88E /* Pods-Schedulers_15.debug.xcconfig */,
+				2CFAB2F95ED3ACD2C7F8884502350FF9 /* Pods-Schedulers_15.release.xcconfig */,
 			);
 			name = "Pods-Schedulers_15";
 			path = "Target Support Files/Pods-Schedulers_15";
+			sourceTree = "<group>";
+		};
+		8F68F917E64D85A306716D2B44C722DD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				81E471B621DDBB69000EAC08695BD07A /* Pods-Schedulers_15 */,
+				A66F5332A2FBD94B8296974742B5E7FC /* Pods-Schedulers_15-Schedulers_15UITests */,
+				EDF486F9221441D9DC660C9ABF232203 /* Pods-Schedulers_15Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A66F5332A2FBD94B8296974742B5E7FC /* Pods-Schedulers_15-Schedulers_15UITests */ = {
+			isa = PBXGroup;
+			children = (
+				48822046901177C26A3F65B04C3CDED2 /* Pods-Schedulers_15-Schedulers_15UITests.modulemap */,
+				0829A60E3D43BDEC9C20B3A6BDA35F76 /* Pods-Schedulers_15-Schedulers_15UITests-acknowledgements.markdown */,
+				0EC248C799E3EB8868BF9ED2AAA792C2 /* Pods-Schedulers_15-Schedulers_15UITests-acknowledgements.plist */,
+				CAE3F0915364346803196970F1ADD60E /* Pods-Schedulers_15-Schedulers_15UITests-dummy.m */,
+				FC6F49562AED1008829384B3BF25648E /* Pods-Schedulers_15-Schedulers_15UITests-frameworks.sh */,
+				DC115BA5ED20E12D36E200D26E942227 /* Pods-Schedulers_15-Schedulers_15UITests-Info.plist */,
+				B1CA8B703F304EEA62E24049E4E2D3C5 /* Pods-Schedulers_15-Schedulers_15UITests-umbrella.h */,
+				80438436382D1306019939FBD312BEA6 /* Pods-Schedulers_15-Schedulers_15UITests.debug.xcconfig */,
+				959E18A9934014A9907B3209426BC060 /* Pods-Schedulers_15-Schedulers_15UITests.release.xcconfig */,
+			);
+			name = "Pods-Schedulers_15-Schedulers_15UITests";
+			path = "Target Support Files/Pods-Schedulers_15-Schedulers_15UITests";
 			sourceTree = "<group>";
 		};
 		AC7E226B33430915A8F150D75B40FA3C /* Support Files */ = {
@@ -576,49 +668,65 @@
 			path = "../Target Support Files/RxSwift";
 			sourceTree = "<group>";
 		};
-		B98AD0D2BE7A897325621FE84E17FCA1 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				682A90C2A686638A74125A8A2B837CA8 /* Pods-Schedulers_15 */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				59C65D12A66CD9D7BFEE915694839731 /* Pods */,
-				5CA826C5179379536F0A960B86625048 /* Products */,
-				B98AD0D2BE7A897325621FE84E17FCA1 /* Targets Support Files */,
+				483F5209B19539385EC50E953F265C23 /* Products */,
+				8F68F917E64D85A306716D2B44C722DD /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E2A8756CA1FF5258A0344D53C5C60EC1 /* OS X */,
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E2A8756CA1FF5258A0344D53C5C60EC1 /* OS X */ = {
+		EDF486F9221441D9DC660C9ABF232203 /* Pods-Schedulers_15Tests */ = {
 			isa = PBXGroup;
 			children = (
-				C1430F003D39D9906881A6AC724B7931 /* Cocoa.framework */,
+				78A94F4FAC0936E967E18C6901A30FC9 /* Pods-Schedulers_15Tests.modulemap */,
+				247E426664CB421C8237CFD1F49940E9 /* Pods-Schedulers_15Tests-acknowledgements.markdown */,
+				A60A1F6266910366620983FD315A13FF /* Pods-Schedulers_15Tests-acknowledgements.plist */,
+				9233D5F4CC0507D80C3335098D974182 /* Pods-Schedulers_15Tests-dummy.m */,
+				F53ADC4BA38F1F8C2DFCC11564753415 /* Pods-Schedulers_15Tests-Info.plist */,
+				06EB02EC9F6A37BB6BF0899864AA8548 /* Pods-Schedulers_15Tests-umbrella.h */,
+				C8A75D0FD4E4638A96BD5A034520AD17 /* Pods-Schedulers_15Tests.debug.xcconfig */,
+				5E90881C4A3E64521D02416B92A41CB7 /* Pods-Schedulers_15Tests.release.xcconfig */,
 			);
-			name = "OS X";
+			name = "Pods-Schedulers_15Tests";
+			path = "Target Support Files/Pods-Schedulers_15Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		393BB5D14F159A40D52B1324310BB879 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				562EB0672080925F1B212FA35B7A419F /* Pods-Schedulers_15Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6459595519558DCDC3C34847B80E95B9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EC21719393E34D87D6FF6FD81865AE62 /* RxSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B9B611C7457D035D12EF0DFD2DC11EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA99420F39612DB4D403277121EDE4C2 /* Pods-Schedulers_15-Schedulers_15UITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,7 +747,7 @@
 			buildPhases = (
 				9A1F730C095469C7AACA5AC586EED678 /* Headers */,
 				23EBCD841BE0B83C4C0FC4AAA4ABFEC8 /* Sources */,
-				2F1D24AF0B2A9518E74E67DAE7B2E7E9 /* Frameworks */,
+				181EF09C68EB2A7E9A10876C1AF45166 /* Frameworks */,
 				2CB92F7A143367B49095769218D3F3F5 /* Resources */,
 			);
 			buildRules = (
@@ -652,13 +760,51 @@
 			productReference = D2FE119CAD5F53228A31CBFA364657EA /* Pods-Schedulers_15 */;
 			productType = "com.apple.product-type.framework";
 		};
+		9E5D9F71909B2BC753020C2EDBDC110F /* Pods-Schedulers_15Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2304C50BA5294F934B3AEA0E6FE30961 /* Build configuration list for PBXNativeTarget "Pods-Schedulers_15Tests" */;
+			buildPhases = (
+				393BB5D14F159A40D52B1324310BB879 /* Headers */,
+				4CC47FC353F4A77A418FBAAD89F5AA3F /* Sources */,
+				306374B73CDBDF44AB568CFE416D454A /* Frameworks */,
+				3975BBA2E8FE71B2C368FC58CF08A9D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B673C242BC3640CE8FA019E28F2C561 /* PBXTargetDependency */,
+			);
+			name = "Pods-Schedulers_15Tests";
+			productName = Pods_Schedulers_15Tests;
+			productReference = 39FA026E4B1AFDDB9D9265FC358A1B15 /* Pods-Schedulers_15Tests */;
+			productType = "com.apple.product-type.framework";
+		};
+		D495AB09F6038B6F8B58E0139C368410 /* Pods-Schedulers_15-Schedulers_15UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EEAA51CED064AE2FD6FC2A1FAE60CC1 /* Build configuration list for PBXNativeTarget "Pods-Schedulers_15-Schedulers_15UITests" */;
+			buildPhases = (
+				7B9B611C7457D035D12EF0DFD2DC11EC /* Headers */,
+				F8A3DA76E040966579176E427965839D /* Sources */,
+				B8457F310721F31345D920D125905D4D /* Frameworks */,
+				18801531FF9765BD21295D85FFD1A662 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E323D95AD24AB67B95687D0FC64DCEF /* PBXTargetDependency */,
+			);
+			name = "Pods-Schedulers_15-Schedulers_15UITests";
+			productName = Pods_Schedulers_15_Schedulers_15UITests;
+			productReference = F9D811A243999CDCC96984D45A365F1E /* Pods-Schedulers_15-Schedulers_15UITests */;
+			productType = "com.apple.product-type.framework";
+		};
 		EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADE37E87D7CF8190E87E435D6A585545 /* Build configuration list for PBXNativeTarget "RxSwift" */;
 			buildPhases = (
 				6459595519558DCDC3C34847B80E95B9 /* Headers */,
 				66314B6EBE26A170A52DA7A06EFB0499 /* Sources */,
-				0ABCD602F756C206642783C5C83B8FD8 /* Frameworks */,
+				A0CD260DD361300B7C671CCCFA7947AC /* Frameworks */,
 				A65F0D6650D420776C4EAC962F0EABB8 /* Resources */,
 			);
 			buildRules = (
@@ -688,18 +834,34 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 5CA826C5179379536F0A960B86625048 /* Products */;
+			productRefGroup = 483F5209B19539385EC50E953F265C23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				7232DDF4ACC2DE92AB6ED2492E117810 /* Pods-Schedulers_15 */,
+				D495AB09F6038B6F8B58E0139C368410 /* Pods-Schedulers_15-Schedulers_15UITests */,
+				9E5D9F71909B2BC753020C2EDBDC110F /* Pods-Schedulers_15Tests */,
 				EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		18801531FF9765BD21295D85FFD1A662 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CB92F7A143367B49095769218D3F3F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3975BBA2E8FE71B2C368FC58CF08A9D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -721,6 +883,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				55A4E0A6CB8CD7925403C4BC9010124B /* Pods-Schedulers_15-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC47FC353F4A77A418FBAAD89F5AA3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BAA7EB382E61F680375B1B075EFBCB2 /* Pods-Schedulers_15Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -882,9 +1052,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8A3DA76E040966579176E427965839D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D438D66541E31653DB629EC886B424A3 /* Pods-Schedulers_15-Schedulers_15UITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5B673C242BC3640CE8FA019E28F2C561 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Schedulers_15";
+			target = 7232DDF4ACC2DE92AB6ED2492E117810 /* Pods-Schedulers_15 */;
+			targetProxy = 5D61420C6B6BD3601C5B3DD71884A219 /* PBXContainerItemProxy */;
+		};
+		5E323D95AD24AB67B95687D0FC64DCEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxSwift;
+			target = EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */;
+			targetProxy = E3C82D42C99394AAB63ED19203CFF01E /* PBXContainerItemProxy */;
+		};
 		B9FDD47EE42D2663DA308FC24670522A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxSwift;
@@ -894,7 +1084,192 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		11D25F3D931385FE4A55BB204E6087A1 /* Debug */ = {
+		0A454D27953973492F938F990645D859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72543FEE4DF1AB534E7C888943A0E7F8 /* RxSwift.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RxSwift/RxSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RxSwift/RxSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RxSwift/RxSwift.modulemap";
+				PRODUCT_MODULE_NAME = RxSwift;
+				PRODUCT_NAME = RxSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		44D4BDA109D45B142E61A9191201B010 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CFAB2F95ED3ACD2C7F8884502350FF9 /* Pods-Schedulers_15.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Schedulers_15/Pods-Schedulers_15-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Schedulers_15/Pods-Schedulers_15.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		48ABDF5929DA80CD5286930ACA86DB07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48408E0FEF7DBA2BB22CCC6367E0F88E /* Pods-Schedulers_15.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Schedulers_15/Pods-Schedulers_15-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Schedulers_15/Pods-Schedulers_15.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6E6ABB72847BB23F7D037CE9A4C185BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 959E18A9934014A9907B3209426BC060 /* Pods-Schedulers_15-Schedulers_15UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Schedulers_15-Schedulers_15UITests/Pods-Schedulers_15-Schedulers_15UITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Schedulers_15-Schedulers_15UITests/Pods-Schedulers_15-Schedulers_15UITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A88F0FBA4A9418FF379133F64291ED20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E90881C4A3E64521D02416B92A41CB7 /* Pods-Schedulers_15Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Schedulers_15Tests/Pods-Schedulers_15Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Schedulers_15Tests/Pods-Schedulers_15Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -947,7 +1322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -960,151 +1335,44 @@
 			};
 			name = Debug;
 		};
-		745FA8B36267E03B02E01A4DD08DF627 /* Debug */ = {
+		BCDD0F6FA9E51C160A65A3A9D86AA6D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72543FEE4DF1AB534E7C888943A0E7F8 /* RxSwift.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RxSwift/RxSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RxSwift/RxSwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/RxSwift/RxSwift.modulemap";
-				PRODUCT_MODULE_NAME = RxSwift;
-				PRODUCT_NAME = RxSwift;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7C006994ABA06D428109F5B3ED9C1D4C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EFFEA9333AACC02B0E7A488BAE33709 /* Pods-Schedulers_15.release.xcconfig */;
+			baseConfigurationReference = 80438436382D1306019939FBD312BEA6 /* Pods-Schedulers_15-Schedulers_15UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Schedulers_15/Pods-Schedulers_15-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Schedulers_15-Schedulers_15UITests/Pods-Schedulers_15-Schedulers_15UITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
-				MODULEMAP_FILE = "Target Support Files/Pods-Schedulers_15/Pods-Schedulers_15.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Schedulers_15-Schedulers_15UITests/Pods-Schedulers_15-Schedulers_15UITests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7F38A3DE974D61BCD7F652C72042C4EB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71A3FDE63D0FE38F92E04C694BC2920A /* RxSwift.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RxSwift/RxSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RxSwift/RxSwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/RxSwift/RxSwift.modulemap";
-				PRODUCT_MODULE_NAME = RxSwift;
-				PRODUCT_NAME = RxSwift;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8B8A846271EE576E85BCB699C49FFF0C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8AFD835EBB417DADBA05D47D1D06D7E /* Pods-Schedulers_15.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Schedulers_15/Pods-Schedulers_15-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
-				MODULEMAP_FILE = "Target Support Files/Pods-Schedulers_15/Pods-Schedulers_15.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		9FC554FFA36DFC5B9D32F08A580F0655 /* Release */ = {
+		C605C363CC9F26F9FF97DBB1D5C6E25C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1154,7 +1422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1166,14 +1434,104 @@
 			};
 			name = Release;
 		};
+		CD82844C2A9059620DDEF5E37B5F17A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71A3FDE63D0FE38F92E04C694BC2920A /* RxSwift.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RxSwift/RxSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RxSwift/RxSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RxSwift/RxSwift.modulemap";
+				PRODUCT_MODULE_NAME = RxSwift;
+				PRODUCT_NAME = RxSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E79D4B13C8EB67F956556ABD7EC3CA41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8A75D0FD4E4638A96BD5A034520AD17 /* Pods-Schedulers_15Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Schedulers_15Tests/Pods-Schedulers_15Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Schedulers_15Tests/Pods-Schedulers_15Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2304C50BA5294F934B3AEA0E6FE30961 /* Build configuration list for PBXNativeTarget "Pods-Schedulers_15Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E79D4B13C8EB67F956556ABD7EC3CA41 /* Debug */,
+				A88F0FBA4A9418FF379133F64291ED20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11D25F3D931385FE4A55BB204E6087A1 /* Debug */,
-				9FC554FFA36DFC5B9D32F08A580F0655 /* Release */,
+				BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */,
+				C605C363CC9F26F9FF97DBB1D5C6E25C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EEAA51CED064AE2FD6FC2A1FAE60CC1 /* Build configuration list for PBXNativeTarget "Pods-Schedulers_15-Schedulers_15UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCDD0F6FA9E51C160A65A3A9D86AA6D2 /* Debug */,
+				6E6ABB72847BB23F7D037CE9A4C185BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1181,8 +1539,8 @@
 		ADE37E87D7CF8190E87E435D6A585545 /* Build configuration list for PBXNativeTarget "RxSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				745FA8B36267E03B02E01A4DD08DF627 /* Debug */,
-				7F38A3DE974D61BCD7F652C72042C4EB /* Release */,
+				0A454D27953973492F938F990645D859 /* Debug */,
+				CD82844C2A9059620DDEF5E37B5F17A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1190,8 +1548,8 @@
 		B6A6533AA750F8947AD4EA61FAC0242B /* Build configuration list for PBXNativeTarget "Pods-Schedulers_15" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8B8A846271EE576E85BCB699C49FFF0C /* Debug */,
-				7C006994ABA06D428109F5B3ED9C1D4C /* Release */,
+				48ABDF5929DA80CD5286930ACA86DB07 /* Debug */,
+				44D4BDA109D45B142E61A9191201B010 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
