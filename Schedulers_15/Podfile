@@ -1,0 +1,11 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Schedulers_15' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Schedulers_15
+  pod 'RxSwift', '5.1.1'
+
+end
