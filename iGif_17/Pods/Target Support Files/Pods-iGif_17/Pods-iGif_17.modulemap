@@ -1,0 +1,6 @@
+framework module Pods_iGif_17 {
+  umbrella header "Pods-iGif_17-umbrella.h"
+
+  export *
+  module * { export * }
+}

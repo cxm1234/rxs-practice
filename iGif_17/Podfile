@@ -1,0 +1,29 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+platform :ios, '12.0'
+use_frameworks!
+
+def my_pods
+  pod 'RxSwift', '5.1.1'
+  pod 'SwiftyJSON'
+  pod 'Gifu'
+end
+
+target 'iGif_17' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  
+
+  # Pods for iGif_17
+  my_pods
+
+
+  target 'iGif_17Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'iGif_17UITests' do
+    # Pods for testing
+  end
+
+end
