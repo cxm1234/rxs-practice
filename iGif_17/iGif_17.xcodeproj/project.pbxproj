@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00EE6253140AA3502286FA14 /* Pods_iGif_17Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353FBEC33E876812092E9766 /* Pods_iGif_17Tests.framework */; };
+		315FB41F26F42FDD0035796D /* GiphySearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FB41E26F42FDD0035796D /* GiphySearchResponse.swift */; };
+		315FB42426F4330B0035796D /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315FB42326F4330B0035796D /* ApiController.swift */; };
 		624A0987BAD0A6F1F51D7665 /* Pods_iGif_17_iGif_17UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B36E481BDCD0763BD9009B /* Pods_iGif_17_iGif_17UITests.framework */; };
 		C9F42C57D839AF9AB835607D /* Pods_iGif_17.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6844AE1D953F79FC773E014 /* Pods_iGif_17.framework */; };
 		D0EB207B26F3954D0019E405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EB207A26F3954D0019E405 /* AppDelegate.swift */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		0078F91AED6753CEC0EB5C2D /* Pods-iGif_17-iGif_17UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGif_17-iGif_17UITests.debug.xcconfig"; path = "Target Support Files/Pods-iGif_17-iGif_17UITests/Pods-iGif_17-iGif_17UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0C31BD07F1D4216861AAB073 /* Pods-iGif_17Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGif_17Tests.debug.xcconfig"; path = "Target Support Files/Pods-iGif_17Tests/Pods-iGif_17Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		315FB41E26F42FDD0035796D /* GiphySearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphySearchResponse.swift; sourceTree = "<group>"; };
+		315FB42326F4330B0035796D /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		353FBEC33E876812092E9766 /* Pods_iGif_17Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iGif_17Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B36E481BDCD0763BD9009B /* Pods_iGif_17_iGif_17UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iGif_17_iGif_17UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		855D016F25DD551EB8715DC6 /* Pods-iGif_17.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iGif_17.debug.xcconfig"; path = "Target Support Files/Pods-iGif_17/Pods-iGif_17.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +118,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		315FB42226F432F50035796D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				315FB42326F4330B0035796D /* ApiController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		D0EB206E26F3954D0019E405 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +151,7 @@
 		D0EB207926F3954D0019E405 /* iGif_17 */ = {
 			isa = PBXGroup;
 			children = (
+				315FB42226F432F50035796D /* Controller */,
 				D0EB20AC26F3A0220019E405 /* Model */,
 				D0EB207A26F3954D0019E405 /* AppDelegate.swift */,
 				D0EB208026F3954D0019E405 /* Main.storyboard */,
@@ -172,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				D0EB20AD26F3A0740019E405 /* GiphyGif.swift */,
+				315FB41E26F42FDD0035796D /* GiphySearchResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -416,6 +430,8 @@
 			files = (
 				D0EB20AE26F3A0740019E405 /* GiphyGif.swift in Sources */,
 				D0EB20AB26F3998C0019E405 /* MainTableViewController.swift in Sources */,
+				315FB42426F4330B0035796D /* ApiController.swift in Sources */,
+				315FB41F26F42FDD0035796D /* GiphySearchResponse.swift in Sources */,
 				D0EB207B26F3954D0019E405 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

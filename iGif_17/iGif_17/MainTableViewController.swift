@@ -11,6 +11,7 @@ import RxSwift
 class MainTableViewController: UITableViewController {
     private let searchController = UISearchController(searchResultsController: nil)
     private let bag = DisposeBag()
+    private var gifs = [GiphyGif]()
     private let search = BehaviorSubject(value: "")
 
     override func viewDidLoad() {
@@ -19,19 +20,40 @@ class MainTableViewController: UITableViewController {
         title = "iGif"
         
         searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+        
+        search.filter { $0.count >= 3 }
+            .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .flatMapLatest { query -> Observable<[GiphyGif]> in
+                return ApiController.shared.search(text: query).catchErrorJustReturn([])
+            }
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { result in
+                self.gifs = result
+                self.tableView.reloadData()
+            })
+            .disposed(by: bag)
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return gifs.count
     }
+    
+    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        
+//    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
