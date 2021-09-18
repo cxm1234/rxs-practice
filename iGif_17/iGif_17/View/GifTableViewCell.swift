@@ -19,20 +19,16 @@ class GifTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         gifImageView.prepareForReuse()
+        gifImageView.image = nil
+        disposable.dispose()
+        disposable = SingleAssignmentDisposable()
         
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func downloadAndDisplay(gif url: URL) {
+        let request = URLRequest(url: url)
+        activityIndicator.startAnimating()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
 
 extension UIImageView: GIFAnimatable {
@@ -46,7 +42,9 @@ extension UIImageView: GIFAnimatable {
     
     public var animator: Animator? {
         get {
-            guard let animator = objc_getAssociatedObject(self, &AssociatedKeys.AnimatorKey) as? Animator else {
+            guard let animator = objc_getAssociatedObject(
+                    self,
+                    &AssociatedKeys.AnimatorKey) as? Animator else {
                 let animator = Animator(withDelegate: self)
                 self.animator = animator
                 return animator
