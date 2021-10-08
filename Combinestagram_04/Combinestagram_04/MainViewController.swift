@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxRelay
+import RxTimelane
 
 class MainViewController: UIViewController {
     
@@ -29,6 +30,14 @@ class MainViewController: UIViewController {
                 preview.image = photos.collage(size: preview.frame.size)
             })
             .disposed(by: bag)
+        
+        images
+            .lane("Photos")
+            .throttle(
+                .milliseconds(500),
+                scheduler: MainScheduler.instance
+            )
+            
         
         images
             .subscribe(onNext: { [weak self] photos in

@@ -8,7 +8,8 @@ target 'Combinestagram_04' do
   # Pods for Combinestagram_04
   pod 'RxSwift', '5.1.1'
   pod 'RxRelay', '5.1.1'
-  
+  pod 'RxTimelane', '1.0.9'
+
   target 'Combinestagram_04Tests' do
     inherit! :search_paths
     # Pods for testing
