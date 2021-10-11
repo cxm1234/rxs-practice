@@ -30,11 +30,44 @@ class TimeLineFetcher {
         list: ListIdentifier,
         apiType: TwitterAPIProtocol.Type
     ) {
-        self.init(account: account, list: <#T##ListIdentifier#>, apiType: <#T##TwitterAPIProtocol.Type#>)
+        self.init(
+            account: account,
+            jsonProvider: apiType.timeline(of: list)
+        )
     }
     
-    private init(account: Driver<TwitterAccount.AccountStatus>, jsonProvider: @escaping (AccessToken, TimeLineCursor) -> Observable<[JSONObject]>) {
+    private init(
+        account: Driver<TwitterAccount.AccountStatus>,
+        jsonProvider: @escaping (AccessToken, TimeLineCursor) -> Observable<[JSONObject]>
+    ) {
+        let currentAccount: Observable<AccessToken> = account
+            .filter { account in
+                switch account {
+                case .authorized: return true
+                default: return false
+                }
+            }
+            .map { account -> AccessToken in
+                switch account {
+                case .authorized(let acaccount):
+                    return acaccount
+                default: fatalError()
+                }
+            }
+            .asObservable()
         
+        let reachableTimerWithAccount = Observable.combineLatest(
+            Observable<Int>.timer(
+                .seconds(0),
+                period: .seconds(timerDelay),
+                scheduler: MainScheduler.instance
+            ),
+            Reachability.rx.reachable,
+            currentAccount,
+            paused.asObservable()) { _, reachable, currentAccount, paused in
+                    return (reachable && !paused) ? account : nil
+                })
+
     }
     
     

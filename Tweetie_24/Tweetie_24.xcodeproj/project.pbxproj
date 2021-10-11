@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31F338AB2713C87F00DD8415 /* Reachability+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F338AA2713C87F00DD8415 /* Reachability+.swift */; };
 		B5F930C4BE269B69CA702AE8 /* Pods_TweetieAbstract_Tweetie_24.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77808B07F7D87D62EAB379E /* Pods_TweetieAbstract_Tweetie_24.framework */; };
 		D00F515E2711190B00906C90 /* members.json-count-100-include_entities-false-owner_screen_name-icanzilb-skip_status-1-slug-RxSwift in Resources */ = {isa = PBXBuildFile; fileRef = D00F51522711190B00906C90 /* members.json-count-100-include_entities-false-owner_screen_name-icanzilb-skip_status-1-slug-RxSwift */; };
 		D00F515F2711190B00906C90 /* statuses.json-owner_screen_name-icanzilb-slug-RxSwift in Resources */ = {isa = PBXBuildFile; fileRef = D00F51532711190B00906C90 /* statuses.json-owner_screen_name-icanzilb-slug-RxSwift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		0414A64A2C181538326F2823 /* Pods-TweetieAbstract-Tweetie_24.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-Tweetie_24.release.xcconfig"; path = "Target Support Files/Pods-TweetieAbstract-Tweetie_24/Pods-TweetieAbstract-Tweetie_24.release.xcconfig"; sourceTree = "<group>"; };
+		31F338AA2713C87F00DD8415 /* Reachability+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reachability+.swift"; sourceTree = "<group>"; };
 		892DEDE4DB52E1F93B385500 /* Pods-TweetieAbstract-Tweetie_24.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-Tweetie_24.debug.xcconfig"; path = "Target Support Files/Pods-TweetieAbstract-Tweetie_24/Pods-TweetieAbstract-Tweetie_24.debug.xcconfig"; sourceTree = "<group>"; };
 		D00F51522711190B00906C90 /* members.json-count-100-include_entities-false-owner_screen_name-icanzilb-skip_status-1-slug-RxSwift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "members.json-count-100-include_entities-false-owner_screen_name-icanzilb-skip_status-1-slug-RxSwift"; sourceTree = "<group>"; };
 		D00F51532711190B00906C90 /* statuses.json-owner_screen_name-icanzilb-slug-RxSwift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "statuses.json-owner_screen_name-icanzilb-slug-RxSwift"; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31F338A92713C85D00DD8415 /* Common Classes */ = {
+			isa = PBXGroup;
+			children = (
+				31F338AA2713C87F00DD8415 /* Reachability+.swift */,
+			);
+			path = "Common Classes";
+			sourceTree = "<group>";
+		};
 		47B4EAA885F120CD04B84312 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +211,7 @@
 		D0680CFD27110FAE005F9678 /* Tweetie_24 */ = {
 			isa = PBXGroup;
 			children = (
+				31F338A92713C85D00DD8415 /* Common Classes */,
 				D09F44F927131D330095D375 /* DataEntities */,
 				D09F44F12712E9540095D375 /* View Model */,
 				D09F44EC27129BC90095D375 /* TwitterAPI */,
@@ -476,6 +487,7 @@
 				D0680CFF27110FAE005F9678 /* AppDelegate.swift in Sources */,
 				D09F44E927128F9E0095D375 /* Navigator.swift in Sources */,
 				D09F44F62713165F0095D375 /* TimeLineFetcher.swift in Sources */,
+				31F338AB2713C87F00DD8415 /* Reachability+.swift in Sources */,
 				D09F44FD2713275A0095D375 /* DateFormatter+Twitter.swift in Sources */,
 				D09F44F8271319120095D375 /* TimeLineCursor.swift in Sources */,
 				D09F44EE27129C0B0095D375 /* TwitterAccount.swift in Sources */,
