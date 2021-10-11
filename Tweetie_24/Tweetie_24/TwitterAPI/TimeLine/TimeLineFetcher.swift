@@ -64,10 +64,28 @@ class TimeLineFetcher {
             ),
             Reachability.rx.reachable,
             currentAccount,
-            paused.asObservable()) { _, reachable, currentAccount, paused in
-                    return (reachable && !paused) ? account : nil
-                })
-
+            paused.asObservable(),
+            resultSelector: { _ , reachable, currentAccount, paused in
+                return (reachable && !paused) ? account : nil
+            })
+            .filter { $0 != nil }
+            .map { $0! }
+        
+        let feedCursor = BehaviorRelay<TimeLineCursor>(value: .none)
+        
+        timeline = Observable<[Tweet]>.empty()
+        
+    }
+    
+    static func currentCursor(
+        lastCursor: TimeLineCursor,
+        tweets: [Tweet]
+    ) -> TimeLineCursor {
+        return tweets.reduce(lastCursor) { status, tweet in
+            let max: Int64 = tweet.id < status.maxId ? tweet.id - 1 : status.maxId
+            let since: Int64 = tweet.id > status.sinceId ? tweet.id : status.sinceId
+            return TimeLineCursor(max: max, since: since)
+        }
     }
     
     
