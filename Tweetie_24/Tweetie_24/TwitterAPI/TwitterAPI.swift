@@ -48,5 +48,16 @@ struct TwitterAPI: TwitterAPIProtocol {
         }
     }
     
+    static private func request<T: Any>(_ token: AccessToken, address: Address, parameters: [String: String] = [:]) -> Observable<T> {
+        return Observable.create { observer in
+            var comps = URLComponents(string: address.url.absoluteString)!
+            comps.queryItems = parameters.sorted{ $0.0 < $1.0 }.map(URLQueryItem.init)
+            let url = try! comps.asURL()
+            
+            guard !TwitterAccount.isLocal else {
+//                if let cachedFileURL = Bundle.main.url(forResource: url.safeLo, withExtension: <#T##String?#>)
+            }
+        }
+    }
     
 }

@@ -22,7 +22,8 @@ class Navigator {
     func show(seque: Segue, sender: UIViewController) {
         switch seque {
         case .listTimeline(let account, let list):
-            let vm = 
+            let vm = ListTimeLineViewModel(account: account, list: list)
+//            show
         case .listPeople(let driver, let listIdentifier):
             <#code#>
         case .personTimeline(let driver, let listIdentifier):
