@@ -25,9 +25,22 @@ class Navigator {
             let vm = ListTimeLineViewModel(account: account, list: list)
 //            show
         case .listPeople(let driver, let listIdentifier):
-            <#code#>
+            
         case .personTimeline(let driver, let listIdentifier):
-            <#code#>
+            
+        }
+    }
+    
+    private func show(targer: UIViewController, sender: UIViewController) {
+        if let nav = sender as? UINavigationController {
+            nav.pushViewController(targer, animated: false)
+            return
+        }
+        
+        if let nav = sender.navigationController {
+            nav.pushViewController(targer, animated: true)
+        } else {
+            sender.present(targer, animated: true, completion: nil)
         }
     }
 }

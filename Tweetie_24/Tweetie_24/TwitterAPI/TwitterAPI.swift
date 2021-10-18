@@ -42,22 +42,78 @@ struct TwitterAPI: TwitterAPIProtocol {
     
     static func timeline(of username: String) -> (AccessToken, TimeLineCursor) -> Observable<[JSONObject]> {
         return { account, cursor in
-            return request(account, address: TwitterAPI.Address.timeline, parameters: [
-                "screen_name": username, "contributor_details": false, "count": "100", "include_rts": "true"
+            return request(
+                account,
+                address: TwitterAPI.Address.timeline,
+                parameters: [
+                "screen_name": username,
+                "contributor_details": "false",
+                "count": "100",
+                "include_rts": "true"
             ])
         }
     }
     
-    static private func request<T: Any>(_ token: AccessToken, address: Address, parameters: [String: String] = [:]) -> Observable<T> {
+    static private func request<T: Any>(
+        _ token: AccessToken,
+        address: Address,
+        parameters: [String: String] = [:]
+    ) -> Observable<T> {
         return Observable.create { observer in
             var comps = URLComponents(string: address.url.absoluteString)!
             comps.queryItems = parameters.sorted{ $0.0 < $1.0 }.map(URLQueryItem.init)
             let url = try! comps.asURL()
             
             guard !TwitterAccount.isLocal else {
-//                if let cachedFileURL = Bundle.main.url(forResource: url.safeLo, withExtension: <#T##String?#>)
+                if let cachedFileURL = Bundle.main.url(forResource: url.safeLocalRepresentation.lastPathComponent, withExtension: nil),
+                   let data = try? Data(contentsOf: cachedFileURL),
+                   let json = ((try? JSONSerialization.jsonObject(with: data, options: []) as? T) as T??),
+                   let result = json {
+                    observer.onNext(result)
+                }
+                observer.onCompleted()
+                return Disposables.create()
             }
+            
+            let request = AF.request(
+                url.absoluteString,
+                method: .get,
+                parameters: Parameters(),
+                encoding: URLEncoding.httpBody,
+                headers: ["Authorization": "Bearer \(token)"]
+            )
+            
+            request.responseJSON { response in
+                guard response.error == nil,
+                      let data = response.data,
+                      let json = ((try? JSONSerialization.jsonObject(with: data, options: []) as? T) as T??),
+                      let result = json else {
+                          observer.onError(Errors.requestFailed)
+                          return
+                      }
+                observer.onNext(result)
+                observer.onCompleted()
+            }
+            
+            return Disposables.create{
+                request.cancel()
+            }
+            
         }
     }
     
+}
+
+extension String {
+    var safeFileNameRepresentation: String {
+        return replacingOccurrences(of: "?", with: "-")
+            .replacingOccurrences(of: "&", with: "-")
+            .replacingOccurrences(of: "=", with: "-")
+    }
+}
+
+extension URL {
+    var safeLocalRepresentation: URL {
+        return URL(string: absoluteString.safeFileNameRepresentation)!
+    }
 }
