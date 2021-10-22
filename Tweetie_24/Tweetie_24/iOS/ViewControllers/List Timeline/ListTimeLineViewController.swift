@@ -7,7 +7,7 @@
 
 import UIKit
 import RxSwift
-
+import Then
 
 class ListTimeLineViewController: UIViewController {
     
@@ -15,10 +15,22 @@ class ListTimeLineViewController: UIViewController {
     @IBOutlet weak var messageView: UIView!
     
     private let bag = DisposeBag()
+    fileprivate var viewModel: ListTimeLineViewModel!
+    fileprivate var navigator: Navigator!
+    
+    static func createWith(navigator: Navigator,
+                           storyboard: UIStoryboard,
+                           viewModel: ListTimeLineViewModel) ->
+    ListTimeLineViewController {
+        return storyboard.instantiateViewController(ofType: ListTimeLineViewController.self).then { vc in
+            vc.navigator = navigator
+            vc.viewModel = viewModel
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     

@@ -23,11 +23,11 @@ class Navigator {
         switch seque {
         case .listTimeline(let account, let list):
             let vm = ListTimeLineViewModel(account: account, list: list)
-//            show
+//            show(targer: ListTimeLineViewController.cre, sender: <#T##UIViewController#>)
         case .listPeople(let driver, let listIdentifier):
-            
+//            let vm = ListTimeLineViewModel(account: account, list: list)
         case .personTimeline(let driver, let listIdentifier):
-            
+//            let vm = ListTimeLineViewModel(account: account, list: list)
         }
     }
     

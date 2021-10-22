@@ -48,9 +48,11 @@ struct TwitterAccount {
         
         var headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"]
         
-        if let authorizationHeader = HTTPHeader.authorization(username: TwitterAccount.key, password: TwitterAccount.secret) {
-            headers[authorizationHeader.name] = authorizationHeader.value
-        }
+        let authorizationHeader = HTTPHeader.authorization(
+            username: TwitterAccount.key,
+            password: TwitterAccount.secret
+        )
+        headers[authorizationHeader.name] = authorizationHeader.value
         
         return AF.request(
             "https://api.twitter.com/oauth2/token",
@@ -71,7 +73,7 @@ struct TwitterAccount {
     }
     
     var `default`: Driver<AccountStatus> {
-//        return TwitterAccount.isLocal ? localA
+        return TwitterAccount.isLocal ? localAccount : remoteAccount
     }
     
     private var localAccount: Driver<AccountStatus> {
@@ -91,7 +93,7 @@ struct TwitterAccount {
             } else {
                 request = self.oAuth2Token(completion: { token in
                     guard let token = token else {
-                        observable.onNext(.unavaliable)
+                        observer.onNext(.unavaliable)
                         return
                     }
                     UserDefaults.standard.set(token, forKey: "token")
