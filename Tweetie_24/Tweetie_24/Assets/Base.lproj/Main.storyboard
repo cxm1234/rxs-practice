@@ -121,6 +121,10 @@
                             <constraint firstItem="atK-hI-bkM" firstAttribute="top" secondItem="AfH-VY-bft" secondAttribute="bottom" id="tHV-u9-aOf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageView" destination="KDL-Rg-vvL" id="nvb-39-oA8"/>
+                        <outlet property="tableView" destination="GQz-D2-Unf" id="Op4-Wn-fHi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFw-4e-Gy8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

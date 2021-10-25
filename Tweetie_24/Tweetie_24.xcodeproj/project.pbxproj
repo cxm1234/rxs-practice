@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		310234D52726450400A22336 /* TweetCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310234D42726450400A22336 /* TweetCellView.swift */; };
+		310234D72726466800A22336 /* Image+setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310234D62726466700A22336 /* Image+setImage.swift */; };
 		31E4FEFB27226D97008D8E9C /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E4FEFA27226D97008D8E9C /* Storyboard+.swift */; };
 		31F338AB2713C87F00DD8415 /* Reachability+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F338AA2713C87F00DD8415 /* Reachability+.swift */; };
 		B5F930C4BE269B69CA702AE8 /* Pods_TweetieAbstract_Tweetie_24.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77808B07F7D87D62EAB379E /* Pods_TweetieAbstract_Tweetie_24.framework */; };
@@ -60,6 +62,8 @@
 
 /* Begin PBXFileReference section */
 		0414A64A2C181538326F2823 /* Pods-TweetieAbstract-Tweetie_24.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-Tweetie_24.release.xcconfig"; path = "Target Support Files/Pods-TweetieAbstract-Tweetie_24/Pods-TweetieAbstract-Tweetie_24.release.xcconfig"; sourceTree = "<group>"; };
+		310234D42726450400A22336 /* TweetCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellView.swift; sourceTree = "<group>"; };
+		310234D62726466700A22336 /* Image+setImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+setImage.swift"; sourceTree = "<group>"; };
 		31E4FEFA27226D97008D8E9C /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
 		31F338AA2713C87F00DD8415 /* Reachability+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reachability+.swift"; sourceTree = "<group>"; };
 		892DEDE4DB52E1F93B385500 /* Pods-TweetieAbstract-Tweetie_24.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-Tweetie_24.debug.xcconfig"; path = "Target Support Files/Pods-TweetieAbstract-Tweetie_24/Pods-TweetieAbstract-Tweetie_24.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 			children = (
 				31F338AA2713C87F00DD8415 /* Reachability+.swift */,
 				31E4FEFA27226D97008D8E9C /* Storyboard+.swift */,
+				310234D62726466700A22336 /* Image+setImage.swift */,
 			);
 			path = "Common Classes";
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				D07D5289271DB9C700C7DD50 /* ListTimeLineViewController.swift */,
+				310234D42726450400A22336 /* TweetCellView.swift */,
 			);
 			path = "List Timeline";
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				310234D52726450400A22336 /* TweetCellView.swift in Sources */,
 				D09F44F02712E71B0095D375 /* TwitterAPI.swift in Sources */,
 				D08C3851271B0FEE0037733E /* ListPeopleViewModel.swift in Sources */,
 				D09F44F32712E9800095D375 /* ListTimeLineViewModel.swift in Sources */,
@@ -518,6 +525,7 @@
 				D09F44FD2713275A0095D375 /* DateFormatter+Twitter.swift in Sources */,
 				D09F44F8271319120095D375 /* TimeLineCursor.swift in Sources */,
 				D09F44EE27129C0B0095D375 /* TwitterAccount.swift in Sources */,
+				310234D72726466800A22336 /* Image+setImage.swift in Sources */,
 				D07D528A271DB9C700C7DD50 /* ListTimeLineViewController.swift in Sources */,
 				D09F44FF271329D50095D375 /* User.swift in Sources */,
 				D09F44FB27131D4F0095D375 /* Tweet.swift in Sources */,
