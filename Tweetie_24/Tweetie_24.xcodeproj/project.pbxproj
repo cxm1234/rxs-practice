@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		310234D52726450400A22336 /* TweetCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310234D42726450400A22336 /* TweetCellView.swift */; };
 		310234D72726466800A22336 /* Image+setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310234D62726466700A22336 /* Image+setImage.swift */; };
+		31697FFF2726C4CA00F0B3B2 /* ListPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31697FFE2726C4CA00F0B3B2 /* ListPeopleViewController.swift */; };
+		316980012726C78F00F0B3B2 /* UserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316980002726C78F00F0B3B2 /* UserCellView.swift */; };
+		316980042726C87B00F0B3B2 /* PersonTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316980032726C87B00F0B3B2 /* PersonTimelineViewController.swift */; };
 		31E4FEFB27226D97008D8E9C /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E4FEFA27226D97008D8E9C /* Storyboard+.swift */; };
 		31F338AB2713C87F00DD8415 /* Reachability+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F338AA2713C87F00DD8415 /* Reachability+.swift */; };
 		B5F930C4BE269B69CA702AE8 /* Pods_TweetieAbstract_Tweetie_24.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77808B07F7D87D62EAB379E /* Pods_TweetieAbstract_Tweetie_24.framework */; };
@@ -64,6 +67,9 @@
 		0414A64A2C181538326F2823 /* Pods-TweetieAbstract-Tweetie_24.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-Tweetie_24.release.xcconfig"; path = "Target Support Files/Pods-TweetieAbstract-Tweetie_24/Pods-TweetieAbstract-Tweetie_24.release.xcconfig"; sourceTree = "<group>"; };
 		310234D42726450400A22336 /* TweetCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellView.swift; sourceTree = "<group>"; };
 		310234D62726466700A22336 /* Image+setImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+setImage.swift"; sourceTree = "<group>"; };
+		31697FFE2726C4CA00F0B3B2 /* ListPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPeopleViewController.swift; sourceTree = "<group>"; };
+		316980002726C78F00F0B3B2 /* UserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellView.swift; sourceTree = "<group>"; };
+		316980032726C87B00F0B3B2 /* PersonTimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTimelineViewController.swift; sourceTree = "<group>"; };
 		31E4FEFA27226D97008D8E9C /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
 		31F338AA2713C87F00DD8415 /* Reachability+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reachability+.swift"; sourceTree = "<group>"; };
 		892DEDE4DB52E1F93B385500 /* Pods-TweetieAbstract-Tweetie_24.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-Tweetie_24.debug.xcconfig"; path = "Target Support Files/Pods-TweetieAbstract-Tweetie_24/Pods-TweetieAbstract-Tweetie_24.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +135,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31697FFD2726C49600F0B3B2 /* List People */ = {
+			isa = PBXGroup;
+			children = (
+				31697FFE2726C4CA00F0B3B2 /* ListPeopleViewController.swift */,
+				316980002726C78F00F0B3B2 /* UserCellView.swift */,
+			);
+			path = "List People";
+			sourceTree = "<group>";
+		};
+		316980022726C85200F0B3B2 /* Person Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				316980032726C87B00F0B3B2 /* PersonTimelineViewController.swift */,
+			);
+			path = "Person Timeline";
+			sourceTree = "<group>";
+		};
 		31F338A92713C85D00DD8415 /* Common Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +277,8 @@
 		D07D5287271DB97F00C7DD50 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				316980022726C85200F0B3B2 /* Person Timeline */,
+				31697FFD2726C49600F0B3B2 /* List People */,
 				D07D5288271DB99B00C7DD50 /* List Timeline */,
 			);
 			path = ViewControllers;
@@ -513,12 +538,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316980042726C87B00F0B3B2 /* PersonTimelineViewController.swift in Sources */,
 				310234D52726450400A22336 /* TweetCellView.swift in Sources */,
 				D09F44F02712E71B0095D375 /* TwitterAPI.swift in Sources */,
 				D08C3851271B0FEE0037733E /* ListPeopleViewModel.swift in Sources */,
 				D09F44F32712E9800095D375 /* ListTimeLineViewModel.swift in Sources */,
+				31697FFF2726C4CA00F0B3B2 /* ListPeopleViewController.swift in Sources */,
 				D0680CFF27110FAE005F9678 /* AppDelegate.swift in Sources */,
 				D09F44E927128F9E0095D375 /* Navigator.swift in Sources */,
+				316980012726C78F00F0B3B2 /* UserCellView.swift in Sources */,
 				D09F44F62713165F0095D375 /* TimeLineFetcher.swift in Sources */,
 				31E4FEFB27226D97008D8E9C /* Storyboard+.swift in Sources */,
 				31F338AB2713C87F00DD8415 /* Reachability+.swift in Sources */,
