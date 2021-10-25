@@ -36,6 +36,13 @@ class TimeLineFetcher {
         )
     }
     
+    convenience init(account: Driver<TwitterAccount.AccountStatus>,username: String, apiType: TwitterAPIProtocol.Type) {
+        self.init(
+            account: account,
+            jsonProvider: apiType.timeline(of: username)
+        )
+    }
+    
     private init(
         account: Driver<TwitterAccount.AccountStatus>,
         jsonProvider: @escaping (AccessToken, TimeLineCursor) -> Observable<[JSONObject]>
@@ -82,8 +89,12 @@ class TimeLineFetcher {
         tweets: [Tweet]
     ) -> TimeLineCursor {
         return tweets.reduce(lastCursor) { status, tweet in
-            let max: Int64 = tweet.id < status.maxId ? tweet.id - 1 : status.maxId
-            let since: Int64 = tweet.id > status.sinceId ? tweet.id : status.sinceId
+            let max: Int64 = tweet.id <
+                status.maxId ? tweet.id - 1 :
+            status.maxId
+            let since: Int64 = tweet.id >
+            status.sinceId ? tweet.id :
+            status.sinceId
             return TimeLineCursor(max: max, since: since)
         }
     }

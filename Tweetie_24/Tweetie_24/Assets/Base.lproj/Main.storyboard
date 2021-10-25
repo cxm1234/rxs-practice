@@ -225,6 +225,10 @@
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="rw3-Si-Gra" id="hbX-XE-TDA"/>
+                                            <outlet property="delegate" destination="rw3-Si-Gra" id="nRs-gS-g8F"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                             </stackView>

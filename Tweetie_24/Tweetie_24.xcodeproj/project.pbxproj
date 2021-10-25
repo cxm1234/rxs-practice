@@ -44,6 +44,8 @@
 		D09F44FB27131D4F0095D375 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F44FA27131D4F0095D375 /* Tweet.swift */; };
 		D09F44FD2713275A0095D375 /* DateFormatter+Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F44FC2713275A0095D375 /* DateFormatter+Twitter.swift */; };
 		D09F44FF271329D50095D375 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09F44FE271329D50095D375 /* User.swift */; };
+		D0B8DBBE272778E200A1697C /* TableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8DBBD272778E200A1697C /* TableView+.swift */; };
+		D0CC16E627276F96009EDC59 /* PersonTimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC16E527276F96009EDC59 /* PersonTimelineViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,8 @@
 		D09F44FA27131D4F0095D375 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		D09F44FC2713275A0095D375 /* DateFormatter+Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Twitter.swift"; sourceTree = "<group>"; };
 		D09F44FE271329D50095D375 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D0B8DBBD272778E200A1697C /* TableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+.swift"; sourceTree = "<group>"; };
+		D0CC16E527276F96009EDC59 /* PersonTimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTimelineViewModel.swift; sourceTree = "<group>"; };
 		E77808B07F7D87D62EAB379E /* Pods_TweetieAbstract_Tweetie_24.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TweetieAbstract_Tweetie_24.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -158,6 +162,7 @@
 				31F338AA2713C87F00DD8415 /* Reachability+.swift */,
 				31E4FEFA27226D97008D8E9C /* Storyboard+.swift */,
 				310234D62726466700A22336 /* Image+setImage.swift */,
+				D0B8DBBD272778E200A1697C /* TableView+.swift */,
 			);
 			path = "Common Classes";
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 			children = (
 				D09F44F22712E9800095D375 /* ListTimeLineViewModel.swift */,
 				D08C3850271B0FEE0037733E /* ListPeopleViewModel.swift */,
+				D0CC16E527276F96009EDC59 /* PersonTimelineViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -540,6 +546,7 @@
 			files = (
 				316980042726C87B00F0B3B2 /* PersonTimelineViewController.swift in Sources */,
 				310234D52726450400A22336 /* TweetCellView.swift in Sources */,
+				D0CC16E627276F96009EDC59 /* PersonTimelineViewModel.swift in Sources */,
 				D09F44F02712E71B0095D375 /* TwitterAPI.swift in Sources */,
 				D08C3851271B0FEE0037733E /* ListPeopleViewModel.swift in Sources */,
 				D09F44F32712E9800095D375 /* ListTimeLineViewModel.swift in Sources */,
@@ -551,6 +558,7 @@
 				31E4FEFB27226D97008D8E9C /* Storyboard+.swift in Sources */,
 				31F338AB2713C87F00DD8415 /* Reachability+.swift in Sources */,
 				D09F44FD2713275A0095D375 /* DateFormatter+Twitter.swift in Sources */,
+				D0B8DBBE272778E200A1697C /* TableView+.swift in Sources */,
 				D09F44F8271319120095D375 /* TimeLineCursor.swift in Sources */,
 				D09F44EE27129C0B0095D375 /* TwitterAccount.swift in Sources */,
 				310234D72726466800A22336 /* Image+setImage.swift in Sources */,
