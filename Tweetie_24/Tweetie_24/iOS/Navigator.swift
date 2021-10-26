@@ -16,7 +16,7 @@ class Navigator {
     enum Segue {
         case listTimeline(Driver<TwitterAccount.AccountStatus>, ListIdentifier)
         case listPeople(Driver<TwitterAccount.AccountStatus>, ListIdentifier)
-        case personTimeline(Driver<TwitterAccount.AccountStatus>, ListIdentifier)
+        case personTimeline(Driver<TwitterAccount.AccountStatus>, username: String)
     }
     
     func show(seque: Segue, sender: UIViewController) {
@@ -25,9 +25,15 @@ class Navigator {
             let vm = ListTimeLineViewModel(account: account, list: list)
             show(targer: ListTimeLineViewController.createWith(navigator: self, storyboard: sender.storyboard ?? defaultStoryboard, viewModel: vm), sender: sender)
         case .listPeople(let account, let list):
-            let vm = ListTimeLineViewModel(account: account, list: list)
-        case .personTimeline(let driver, let listIdentifier):
-//            let vm = ListTimeLineViewModel(account: account, list: list)
+            let vm = ListPeopleViewModel(account: account, list: list)
+            show(targer: ListPeopleViewController.createWith(navigator: self, storyboard: sender.storyboard ?? defaultStoryboard, viewModel: vm), sender: sender)
+        case .personTimeline(let account, let username):
+            let vm = PersonTimelineViewModel(
+                account: account,
+                username: username
+            )
+            show(targer: PersonTimelineViewController.createWith(navigator: self, storyboard: sender.storyboard ?? defaultStoryboard, viewModel: vm), sender: sender)
+            
         }
     }
     

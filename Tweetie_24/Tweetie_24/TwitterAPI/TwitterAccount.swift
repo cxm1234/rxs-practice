@@ -58,12 +58,12 @@ struct TwitterAccount {
             "https://api.twitter.com/oauth2/token",
             method: .post,
             parameters: parameters,
-            encoder: URLEncoding.httpBody,
+            encoding: URLEncoding.httpBody,
             headers: headers
         ).responseJSON { response in
             guard response.error == nil,
-                    let data = response.data,
-                    let token: Token = try?
+                  let data = response.data,
+                  let token: Token = try?
                     unbox(data: data) else {
                         completion(nil)
                         return

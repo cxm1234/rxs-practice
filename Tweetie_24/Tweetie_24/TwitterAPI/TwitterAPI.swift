@@ -54,6 +54,39 @@ struct TwitterAPI: TwitterAPIProtocol {
         }
     }
     
+    static func timeline(of list: ListIdentifier) -> (AccessToken, TimeLineCursor) -> Observable<[JSONObject]> {
+        return { account, cursor in
+            var params = ["owner_screen_name": list.username, "slug": list.slug]
+            if cursor != TimeLineCursor.none {
+                params["max_id"] = String(cursor.maxId)
+                params["since_id"] = String(cursor.sinceId)
+            }
+            return request(account, address: TwitterAPI.Address.listFeed, parameters: params)
+        }
+    }
+    
+    static func members(of list: ListIdentifier) -> (AccessToken) -> Observable<[JSONObject]> {
+        return { account in
+            let params = ["owner_screen_name": list.username,
+                          "slug": list.slug,
+                          "skip_status": "1",
+                          "include_entities": "false",
+                          "count": "100"]
+            let response: Observable<JSONObject> = request(
+                account,
+                address: TwitterAPI.Address.listMembers,
+                parameters: params
+            )
+            
+            return response.map { result in
+                guard let users = result["user"] as? [JSONObject] else {
+                    return []
+                }
+                return users
+            }
+        }
+    }
+    
     static private func request<T: Any>(
         _ token: AccessToken,
         address: Address,

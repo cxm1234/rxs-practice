@@ -12,6 +12,7 @@
 		31697FFF2726C4CA00F0B3B2 /* ListPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31697FFE2726C4CA00F0B3B2 /* ListPeopleViewController.swift */; };
 		316980012726C78F00F0B3B2 /* UserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316980002726C78F00F0B3B2 /* UserCellView.swift */; };
 		316980042726C87B00F0B3B2 /* PersonTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316980032726C87B00F0B3B2 /* PersonTimelineViewController.swift */; };
+		319A9E192727907D00E3A4BC /* Tweet+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319A9E182727907D00E3A4BC /* Tweet+.swift */; };
 		31E4FEFB27226D97008D8E9C /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E4FEFA27226D97008D8E9C /* Storyboard+.swift */; };
 		31F338AB2713C87F00DD8415 /* Reachability+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F338AA2713C87F00DD8415 /* Reachability+.swift */; };
 		B5F930C4BE269B69CA702AE8 /* Pods_TweetieAbstract_Tweetie_24.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77808B07F7D87D62EAB379E /* Pods_TweetieAbstract_Tweetie_24.framework */; };
@@ -72,6 +73,7 @@
 		31697FFE2726C4CA00F0B3B2 /* ListPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPeopleViewController.swift; sourceTree = "<group>"; };
 		316980002726C78F00F0B3B2 /* UserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellView.swift; sourceTree = "<group>"; };
 		316980032726C87B00F0B3B2 /* PersonTimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTimelineViewController.swift; sourceTree = "<group>"; };
+		319A9E182727907D00E3A4BC /* Tweet+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tweet+.swift"; sourceTree = "<group>"; };
 		31E4FEFA27226D97008D8E9C /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
 		31F338AA2713C87F00DD8415 /* Reachability+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reachability+.swift"; sourceTree = "<group>"; };
 		892DEDE4DB52E1F93B385500 /* Pods-TweetieAbstract-Tweetie_24.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-Tweetie_24.debug.xcconfig"; path = "Target Support Files/Pods-TweetieAbstract-Tweetie_24/Pods-TweetieAbstract-Tweetie_24.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 				316980032726C87B00F0B3B2 /* PersonTimelineViewController.swift */,
 			);
 			path = "Person Timeline";
+			sourceTree = "<group>";
+		};
+		319A9E172727905D00E3A4BC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				319A9E182727907D00E3A4BC /* Tweet+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		31F338A92713C85D00DD8415 /* Common Classes */ = {
@@ -312,6 +322,7 @@
 		D09F44EB271293FC0095D375 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				319A9E172727905D00E3A4BC /* Extensions */,
 				D07D5287271DB97F00C7DD50 /* ViewControllers */,
 				D0680CFE27110FAE005F9678 /* AppDelegate.swift */,
 				D09F44E827128F9E0095D375 /* Navigator.swift */,
@@ -565,6 +576,7 @@
 				D07D528A271DB9C700C7DD50 /* ListTimeLineViewController.swift in Sources */,
 				D09F44FF271329D50095D375 /* User.swift in Sources */,
 				D09F44FB27131D4F0095D375 /* Tweet.swift in Sources */,
+				319A9E192727907D00E3A4BC /* Tweet+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,7 +756,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HWPJQHW6K7;
+				DEVELOPMENT_TEAM = ZWW68US5K2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tweetie_24/Assets/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -757,7 +769,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.huami.com.Tweetie-24";
+				PRODUCT_BUNDLE_IDENTIFIER = "cxm.huami.com.Tweetie-24";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -771,9 +783,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HWPJQHW6K7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tweetie_24/Assets/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -788,6 +800,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.huami.com.Tweetie-24";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
