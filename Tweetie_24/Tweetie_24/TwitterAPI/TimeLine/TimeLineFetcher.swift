@@ -14,6 +14,7 @@ import RxRealm
 import RealmSwift
 import Reachability
 import Unbox
+import Differentiator
 
 class TimeLineFetcher {
     
@@ -36,7 +37,11 @@ class TimeLineFetcher {
         )
     }
     
-    convenience init(account: Driver<TwitterAccount.AccountStatus>,username: String, apiType: TwitterAPIProtocol.Type) {
+    convenience init(
+        account: Driver<TwitterAccount.AccountStatus>,
+        username: String,
+        apiType: TwitterAPIProtocol.Type
+    ) {
         self.init(
             account: account,
             jsonProvider: apiType.timeline(of: username)
@@ -80,8 +85,18 @@ class TimeLineFetcher {
         
         let feedCursor = BehaviorRelay<TimeLineCursor>(value: .none)
         
-        timeline = Observable<[Tweet]>.empty()
+        timeline = reachableTimerWithAccount
+            .withLatestFrom(feedCursor.asObservable(), resultSelector: { account, cursor in
+                return (account: account, cursor: cursor)
+            })
+            .flatMapLatest(jsonProvider)
+            .map(Tweet.unboxMany(tweets:))
+            .share(replay: 1)
         
+        timeline
+            .scan(.none, accumulator: TimeLineFetcher.currentCursor)
+            .bind(to: feedCursor)
+            .disposed(by: bag)
     }
     
     static func currentCursor(
