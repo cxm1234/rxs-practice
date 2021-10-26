@@ -13,13 +13,25 @@ import RxDataSources
 typealias TaskSection = AnimatableSectionModel<String, TaskItem>
 
 struct TasksViewModel {
-    let scenCoordinator: SceneCoordinatorType
+    let sceneCoordinator: SceneCoordinatorType
     let taskService: TaskServiceType
+    
+    lazy var editAction: Action<TaskItem, Swift.Never> = { this in
+        return Action { task in
+            let editViewModel = EditTaskViewModel(
+                task: task,
+                coordinator: this.sceneCoordinator,
+                updateAction: this.onUpdateTitle(task: task))
+            return this.sceneCoordinator
+                .transition(to: Scene.editTask(editViewModel), type: .modal)
+                .asObservable()
+        }
+    }(self)
     
     init(taskService: TaskServiceType,
          coordinator: SceneCoordinatorType) {
         self.taskService = taskService
-        self.scenCoordinator = coordinator
+        self.sceneCoordinator = coordinator
     }
     
     func onToggle(task: TaskItem) -> CocoaAction {
@@ -67,11 +79,11 @@ struct TasksViewModel {
                 .flatMap { task -> Observable<Void> in
                     let editViewModel = EditTaskViewModel(
                         task: task,
-                        coordinator: self.scenCoordinator,
+                        coordinator: self.sceneCoordinator,
                         updateAction: self.onUpdateTitle(task: task),
                         cancelAction: self.onDelete(task: task)
                     )
-                    return self.scenCoordinator
+                    return self.sceneCoordinator
                         .transition(
                             to: Scene.editTask(editViewModel),
                             type: .modal
