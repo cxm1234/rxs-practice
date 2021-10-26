@@ -128,7 +128,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="g5k-Vf-IeE">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="4hd-8Y-HC9"/>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="4hd-8Y-HC9"/>
                     </navigationItem>
                     <connections>
                         <outlet property="newTasksButton" destination="4hd-8Y-HC9" id="bwF-bO-CdX"/>
