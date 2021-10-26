@@ -159,7 +159,7 @@
         <!--Edit-->
         <scene sceneID="nCd-YY-NJD">
             <objects>
-                <viewController id="hZJ-9s-liw" sceneMemberID="viewController">
+                <viewController id="hZJ-9s-liw" customClass="EditTaskViewController" customModule="QuickTodo_25" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="goj-oM-oEe"/>
                         <viewControllerLayoutGuide type="bottom" id="yqt-Z5-jCu"/>
@@ -196,9 +196,14 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Edit" id="94W-KD-8Er">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="Ioi-aq-cck"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="r2H-6V-m2k"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancle" id="Ioi-aq-cck"/>
+                        <barButtonItem key="rightBarButtonItem" title="OK" id="r2H-6V-m2k"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="Ioi-aq-cck" id="7w0-RD-PlR"/>
+                        <outlet property="okButton" destination="r2H-6V-m2k" id="h6D-hG-j6J"/>
+                        <outlet property="titleView" destination="N7l-JQ-Oij" id="dGW-h4-O8Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUD-iL-ojX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
