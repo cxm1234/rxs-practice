@@ -57,7 +57,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="770"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rGp-zf-sC8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TaskItemCell" id="rGp-zf-sC8" customClass="TaskItemTableViewCell" customModule="QuickTodo_25" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="40.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rGp-zf-sC8" id="pRm-Jq-7TQ">
@@ -89,6 +89,10 @@
                                                 <constraint firstItem="kSi-UW-dx2" firstAttribute="top" secondItem="pRm-Jq-7TQ" secondAttribute="top" constant="8" id="sXA-Qt-qfh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="button" destination="kSi-UW-dx2" id="zwD-KT-Keh"/>
+                                            <outlet property="title" destination="Z3R-C6-N5q" id="toS-wP-wKJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -139,7 +143,7 @@
         <!--Navigation Controller-->
         <scene sceneID="uyj-J2-E96">
             <objects>
-                <navigationController id="QQ6-HB-cCx" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="EditTask" id="QQ6-HB-cCx" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="e3r-we-slP">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

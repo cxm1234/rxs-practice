@@ -7,27 +7,21 @@
 
 import UIKit
 
-class EditTaskViewController: UIViewController {
+class EditTaskViewController: UIViewController, BindableType {
     
     @IBOutlet var titleView: UITextView!
     @IBOutlet var okButton: UIBarButtonItem!
     @IBOutlet var cancelButton: UIBarButtonItem!
+    
+    var viewModel: EditTaskViewModel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    func bindViewModel() {
+        titleView.text = viewModel.itemTitle
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        titleView.becomeFirstResponder()
     }
-    */
 
 }

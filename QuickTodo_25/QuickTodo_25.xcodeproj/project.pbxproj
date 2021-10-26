@@ -24,6 +24,8 @@
 		31F9AFA62727ECE700991846 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F9AFA52727ECE700991846 /* TaskItem.swift */; };
 		31F9AFA82727ECFF00991846 /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F9AFA72727ECFF00991846 /* BindableType.swift */; };
 		31F9AFAA2727EDF600991846 /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F9AFA92727EDF600991846 /* TaskService.swift */; };
+		31F9AFAD2727F83400991846 /* UINavigationController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F9AFAC2727F83400991846 /* UINavigationController+Rx.swift */; };
+		31F9AFB02728003100991846 /* TaskItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F9AFAF2728003100991846 /* TaskItemTableViewCell.swift */; };
 		3348108EAF36C34B8A686DAD /* Pods_QuickTodo_25.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C07B3962F9E254C84EF99C28 /* Pods_QuickTodo_25.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		31F9AFA52727ECE700991846 /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 		31F9AFA72727ECFF00991846 /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 		31F9AFA92727EDF600991846 /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
+		31F9AFAC2727F83400991846 /* UINavigationController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Rx.swift"; sourceTree = "<group>"; };
+		31F9AFAF2728003100991846 /* TaskItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemTableViewCell.swift; sourceTree = "<group>"; };
 		AAD00B5DBA4307EC8F34FFED /* Pods-QuickTodo_25.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickTodo_25.release.xcconfig"; path = "Target Support Files/Pods-QuickTodo_25/Pods-QuickTodo_25.release.xcconfig"; sourceTree = "<group>"; };
 		BD8B9C6BDC894B5078EA69FD /* Pods-QuickTodo_25.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickTodo_25.debug.xcconfig"; path = "Target Support Files/Pods-QuickTodo_25/Pods-QuickTodo_25.debug.xcconfig"; sourceTree = "<group>"; };
 		C07B3962F9E254C84EF99C28 /* Pods_QuickTodo_25.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickTodo_25.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +97,8 @@
 		31F9AF762727D2CF00991846 /* QuickTodo_25 */ = {
 			isa = PBXGroup;
 			children = (
+				31F9AFAE2727FF1F00991846 /* Cells */,
+				31F9AFAB2727F80300991846 /* Extensions */,
 				31F9AFA42727EC5700991846 /* Model */,
 				31F9AFA12727EBEB00991846 /* Services */,
 				31F9AF902727E2AA00991846 /* Scenes */,
@@ -145,6 +151,22 @@
 				31F9AFA72727ECFF00991846 /* BindableType.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		31F9AFAB2727F80300991846 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				31F9AFAC2727F83400991846 /* UINavigationController+Rx.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		31F9AFAE2727FF1F00991846 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				31F9AFAF2728003100991846 /* TaskItemTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		3A52AF40A0B3F74370DB2EC2 /* Pods */ = {
@@ -278,9 +300,11 @@
 				31F9AF942727E2E300991846 /* SceneCoordinatorType.swift in Sources */,
 				31F9AFA82727ECFF00991846 /* BindableType.swift in Sources */,
 				31F9AF9E2727E84D00991846 /* EditTaskViewModel.swift in Sources */,
+				31F9AFAD2727F83400991846 /* UINavigationController+Rx.swift in Sources */,
 				31F9AF8F2727E1F200991846 /* EditTaskViewController.swift in Sources */,
 				31F9AFA62727ECE700991846 /* TaskItem.swift in Sources */,
 				31F9AF8D2727DEE400991846 /* TasksViewController.swift in Sources */,
+				31F9AFB02728003100991846 /* TaskItemTableViewCell.swift in Sources */,
 				31F9AFAA2727EDF600991846 /* TaskService.swift in Sources */,
 				31F9AFA02727EB9300991846 /* Scene+ViewController.swift in Sources */,
 				31F9AF982727E45D00991846 /* SceneCoordinator.swift in Sources */,
